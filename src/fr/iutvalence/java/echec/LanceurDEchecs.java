@@ -4,6 +4,7 @@ package fr.iutvalence.java.echec;
 // TODO: Auto-generated Javadoc
 /**
  * The Class LanceurDEchecs.
+ * Application de jeu d'échec
  */
 public class LanceurDEchecs
 {

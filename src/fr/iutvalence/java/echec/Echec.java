@@ -27,6 +27,7 @@ public class Echec
 		this.compteurDeTour=0;
 		this.joueurBlanc=new Joueur();
 		this.joueurNoire=new Joueur();
+		this.echiquierDeLaPartie=new echiquier;
 	}
 	
 	/**

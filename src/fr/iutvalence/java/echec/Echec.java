@@ -13,15 +13,20 @@ public class Echec
 	/** Le joueur noire. */
 	public Joueur joueurNoire;
 	
-	/** Le joueur blanche. */
-	public Joueur joueurBlanche;
+	/** Le joueur blanc. */
+	public Joueur joueurBlanc;
+	
+	/** L'echiquier de la partie. */
+	public echiquier echiquierDeLaPartie;
 	
 	/**
 	 * Instancie une nouvel partie d'echec.
 	 */
 	public Echec()
 	{
-		
+		this.compteurDeTour=0;
+		this.joueurBlanc=new Joueur();
+		this.joueurNoire=new Joueur();
 	}
 	
 	/**

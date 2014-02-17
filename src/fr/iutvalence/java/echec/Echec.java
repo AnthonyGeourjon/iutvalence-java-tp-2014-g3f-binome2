@@ -11,10 +11,10 @@ public class Echec
 	public int compteurDeTour ;
 	
 	/** Le joueur noire. */
-	public Joueur joueurNoire;
+	public final Joueur joueurNoire;
 	
 	/** Le joueur blanc. */
-	public Joueur joueurBlanc;
+	public final Joueur joueurBlanc;
 	
 	/** L'echiquier de la partie. */
 	public echiquier echiquierDeLaPartie;
@@ -27,7 +27,7 @@ public class Echec
 		this.compteurDeTour=0;
 		this.joueurBlanc=new Joueur();
 		this.joueurNoire=new Joueur();
-		this.echiquierDeLaPartie=new echiquier;
+		this.echiquierDeLaPartie=new echiquier();
 	}
 	
 	/**

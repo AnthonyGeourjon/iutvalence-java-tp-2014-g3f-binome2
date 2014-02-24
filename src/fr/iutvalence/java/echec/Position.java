@@ -14,7 +14,6 @@ public class Position
 	
 	/**
 	 * Change la position
-	 *
 	 * @param nouvellePositionColonne la nouvelle position colonne
 	 * @param nouvellePositionLigne la nouvelle position ligne
 	 * @return vraie, si les parametres était correcte

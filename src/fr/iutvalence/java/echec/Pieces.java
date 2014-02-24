@@ -4,7 +4,7 @@ package fr.iutvalence.java.echec;
 /**
  * The Class Pieces.
  */
-public abstract class Pieces
+public  class Pieces
 {
 	
 	/** Position de la pièce. */

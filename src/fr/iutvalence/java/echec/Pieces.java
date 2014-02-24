@@ -12,7 +12,7 @@ public class Pieces
 	
 
 	/** Deplacement de la pièce  */
-	public abstract boolean deplacer()
+	public boolean deplacer()
 	{
 		// TODO Auto-generated method stub
 		return false;

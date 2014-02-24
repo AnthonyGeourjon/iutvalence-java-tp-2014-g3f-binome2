@@ -2,6 +2,7 @@ package fr.iutvalence.java.echec;
 
 /**
  * Represente une partie d'échec
+ * Au début, le joueur noir et blanc possèdent 16 pièces 
  */
 public class PartieDEchecs
 {

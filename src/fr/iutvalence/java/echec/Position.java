@@ -12,6 +12,19 @@ public class Position
 	/** Colonne de la position. */
 	public final int colonne ;
 	
+	
+	/**
+	 * Instantiates a new position.
+	 *
+	 * @param nouvellePositionColonne position de la colonne
+	 * @param nouvellePositionLigne position de la ligne
+	 */
+	public Position(int nouvellePositionColonne, int nouvellePositionLigne)
+	{
+		this.colonne=nouvellePositionColonne;
+		this.ligne=nouvellePositionLigne;
+	}
+	
 	/**
 	 * Change la position
 	 * @param nouvellePositionColonne la nouvelle position colonne

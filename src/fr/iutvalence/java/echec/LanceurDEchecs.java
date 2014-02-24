@@ -1,24 +1,26 @@
 package fr.iutvalence.java.echec;
 
 
-// TODO: Auto-generated Javadoc
+// TODO corriger les accents (il fallait changer l'encodage de texte avant)
+// TODO corriger le commentaire 
 /**
  * The Class LanceurDEchecs.
- * Application de jeu d'échec
+ * Application de jeu d'ï¿½chec
  */
 public class LanceurDEchecs
 {
-
+	// TODO corriger le commentaire 
 	/**
 	 * The main method.
-	 * Cette application execute une partie d'échec.
+	 * Cette application execute une partie d'ï¿½chec.
 	 * @param args the arguments
 	 */
 	public static void main(String[] args)
 	{
-		System.out.println("Création d'une partie d'échec");
+		// TODO corriger les accents 
+		System.out.println("Crï¿½ation d'une partie d'ï¿½chec");
 		Echec partieDEchec = new Echec();
-		System.out.println("Démarrage de la partie d'échec");
+		System.out.println("Dï¿½marrage de la partie d'ï¿½chec");
 		partieDEchec.jouer();
 		System.out.println("Fin de la partie.");
 

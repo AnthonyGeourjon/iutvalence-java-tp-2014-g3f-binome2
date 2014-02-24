@@ -1,8 +1,9 @@
 package fr.iutvalence.java.echec;
 
+// TODO corriger le commentaire
 /**
  * The Class Joueur.
- *  Cette classe permet d'instancier des joueurs d'échecs
+ *  Cette classe permet d'instancier des joueurs d'ï¿½checs
  */
 public class Joueur
 {

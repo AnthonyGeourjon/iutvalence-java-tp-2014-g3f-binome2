@@ -10,7 +10,7 @@ public class Position
 	private final int ligne ;
 	
 	/** Colonne de la position. */
-	public final int colonne ;
+	private final int colonne ;
 	
 	
 	/**
@@ -19,7 +19,7 @@ public class Position
 	 * @param nouvellePositionColonne position de la colonne
 	 * @param nouvellePositionLigne position de la ligne
 	 */
-	public Position(int nouvellePositionColonne, int nouvellePositionLigne)
+	public Position(int nouvellePositionColonne, int nouvellePositionLigne) throws positionNonValide
 	{
 		this.colonne=nouvellePositionColonne;
 		this.ligne=nouvellePositionLigne;
@@ -31,9 +31,5 @@ public class Position
 	 * @param nouvellePositionLigne la nouvelle position ligne
 	 * @return vraie, si les parametres était correcte
 	 */
-	public void setPostion(int nouvellePositionColonne, int nouvellePositionLigne)
-	{
-		
-	}
-	
+
 }

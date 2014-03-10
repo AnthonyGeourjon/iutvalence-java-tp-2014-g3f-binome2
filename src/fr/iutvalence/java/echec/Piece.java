@@ -11,10 +11,10 @@ public abstract class Piece
 	private Position positionDeLaPiece ;
 	
 
-	/** Deplacement de la pièce  */
-	public void deplacer()
+	/** Deplacement de la pièce  
+	 * @param nouvellePosition -> nouvelle position de la piece */
+	public void deplacer(Position nouvellePosition)
 	{
-		// TODO Auto-generated method stub
-		
+		this.positionDeLaPiece=nouvellePosition;
 	}
 }

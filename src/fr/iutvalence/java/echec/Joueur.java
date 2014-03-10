@@ -20,11 +20,18 @@ public class Joueur
 	 * Deplace une piece.
 	 */
 
-	public void jouerCoup()
+	public void jouerCoup() 
 	{
-		int pieceADeplacer = 1;
+		int pieceADeplacer = 1, x=4, y=5; // x et y seront des coordonné a demander a l'utilisateur
 		
-		this.piecesDuJoueur[pieceADeplacer].deplacer();
+		try
+		{
+			this.piecesDuJoueur[pieceADeplacer].deplacer(new Position(x, y));
+		}
+		catch (positionNonValide)
+		{
+			while()
+		}
 		
 	}
 

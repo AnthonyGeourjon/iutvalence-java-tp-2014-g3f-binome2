@@ -13,4 +13,7 @@ public class Echiquier
 	
 	/** Nombre de colonne de l'échiquier. */
 	public static int NOMBRE_COLONNE_ECHIQUIER = 8;
+	
+	/** Pieces du joueur. */
+	private Piece[] piecesSurLEchiquier;
 }

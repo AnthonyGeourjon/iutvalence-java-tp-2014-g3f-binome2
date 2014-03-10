@@ -19,7 +19,7 @@ public class Position
 	 * @param nouvellePositionColonne position de la colonne
 	 * @param nouvellePositionLigne position de la ligne
 	 */
-	public Position(int nouvellePositionColonne, int nouvellePositionLigne) throws positionNonValide
+	public Position(int nouvellePositionColonne, int nouvellePositionLigne) 
 	{
 		this.colonne=nouvellePositionColonne;
 		this.ligne=nouvellePositionLigne;

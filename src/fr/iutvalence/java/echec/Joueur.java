@@ -12,25 +12,13 @@ import java.util.Scanner;
 public class Joueur
 {
 
-
-
 	/**
 	 * Le joueur joue: Deplace une piece.
 	 */
-
-	public void jouerCoup()
+	public void deplacerPiece()
 	{
-		
-	}
+		// TODO Auto-generated method stub
 
-	/**
-	 * @return la position e où le joueur veut deplacer sa pièce
-	 */
-	public int demanderCoordonnee() throws PositionNonValideException
-	{
-		Scanner sc = new Scanner(System.in);
-
-		return sc.nextInt();
 	}
 
 }

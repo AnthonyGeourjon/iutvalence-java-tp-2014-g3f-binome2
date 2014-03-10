@@ -10,10 +10,9 @@ public class Echiquier
 	/** Nombre de lignes d'un échiquier. */
 	public static final int NOMBRE_LIGNE_ECHIQUIER = 8;
 
-	
 	/** Nombre de colonne de l'échiquier. */
 	public static int NOMBRE_COLONNE_ECHIQUIER = 8;
-	
+
 	/** Pieces du joueur. */
 	private Piece[] piecesSurLEchiquier;
 }

@@ -1,8 +1,8 @@
 package fr.iutvalence.java.echec;
 
 /**
- * Represente une partie d'échec
- * Au début, le joueur noir et blanc possèdent 16 pièces 
+ * Represente une partie d'échec Au début, le joueur noir et blanc possèdent 16
+ * pièces
  */
 public class PartieDEchecs
 {
@@ -39,11 +39,9 @@ public class PartieDEchecs
 
 		while (!fin)
 		{
-			this.joueurBlanc.jouerCoup();
-			this.joueurNoir.jouerCoup();
+			this.joueurBlanc.deplacerPiece();
+			this.joueurNoir.deplacerPiece();
 			this.compteurDeTours++;
 		}
 	}
 }
-
-

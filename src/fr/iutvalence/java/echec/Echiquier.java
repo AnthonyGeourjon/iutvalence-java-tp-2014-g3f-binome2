@@ -8,9 +8,9 @@ public class Echiquier
 {
 
 	/** Nombre de lignes d'un échiquier. */
-	public final int NOMBRE_LIGNE_ECHIQUIER = 8;
+	public static final int NOMBRE_LIGNE_ECHIQUIER = 8;
 
 	
 	/** Nombre de colonne de l'échiquier. */
-	public final int NOMBRE_COLONNE_ECHIQUIER = 8;
+	public static int NOMBRE_COLONNE_ECHIQUIER = 8;
 }

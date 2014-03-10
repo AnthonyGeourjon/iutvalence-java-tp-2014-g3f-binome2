@@ -4,7 +4,7 @@ package fr.iutvalence.java.echec;
 /**
  * The Class Pieces.
  */
-public class Pieces
+public class Piece
 {
 	
 	/** Position de la pièce. */
@@ -12,9 +12,9 @@ public class Pieces
 	
 
 	/** Deplacement de la pièce  */
-	public boolean deplacer()
+	public void deplacer()
 	{
 		// TODO Auto-generated method stub
-		return false;
+		
 	}
 }

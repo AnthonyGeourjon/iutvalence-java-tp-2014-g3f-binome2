@@ -12,7 +12,7 @@ public class Joueur
 {
 
 	/** Pieces du joueur. */
-	private Pieces[] piecesDuJoueur;
+	private Piece[] piecesDuJoueur;
 	
 	
 	/**
@@ -24,7 +24,7 @@ public class Joueur
 	{
 		int pieceADeplacer = 1;
 		
-		while (!this.piecesDuJoueur[pieceADeplacer].deplacer());
+		this.piecesDuJoueur[pieceADeplacer].deplacer();
 		
 	}
 

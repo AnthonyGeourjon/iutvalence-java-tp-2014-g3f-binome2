@@ -31,13 +31,9 @@ public class Position
 	 * @param nouvellePositionLigne la nouvelle position ligne
 	 * @return vraie, si les parametres était correcte
 	 */
-	public boolean setPostion(int nouvellePositionColonne, int nouvellePositionLigne)
+	public void setPostion(int nouvellePositionColonne, int nouvellePositionLigne)
 	{
-		if (nouvellePositionColonne>=8 || nouvellePositionLigne<=1)
-			return false;
-		this.ligne=nouvellePositionLigne;
-		this.colonne=nouvellePositionColonne;
-		return true;
+		
 	}
 	
 }

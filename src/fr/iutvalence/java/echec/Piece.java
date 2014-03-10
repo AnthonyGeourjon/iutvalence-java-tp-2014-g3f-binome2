@@ -16,12 +16,12 @@ public abstract class Piece
 
 	/**
 	 * Deplacement de la pièce
-	 * 
-	 * @param nouvellePosition
-	 *            -> nouvelle position de la piece
+	 * @param nouvellePosition devient la position de la pièce
 	 */
 	public void deplacer(Position nouvellePosition)
 	{
 		this.positionDeLaPiece = nouvellePosition;
 	}
+	
+	
 }

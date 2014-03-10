@@ -23,5 +23,9 @@ public abstract class Piece
 		this.positionDeLaPiece = nouvellePosition;
 	}
 	
+	public String toString()
+	{
+		return ("Le propriétaire est " + propriétaire + ", sa position est " + positionDeLaPiece + ".\n");
+	}
 	
 }

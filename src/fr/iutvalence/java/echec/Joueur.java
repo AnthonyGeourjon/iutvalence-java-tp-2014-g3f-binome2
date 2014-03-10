@@ -12,13 +12,28 @@ import java.util.Scanner;
 public class Joueur
 {
 
+	private String nomDujoueur;
+	
 	/**
 	 * Le joueur joue: Deplace une piece.
 	 */
-	public void deplacerPiece()
+	public void deplacerPiece(Echiquier echiquierSurLequelOnjoue)
 	{
-		// TODO Auto-generated method stub
+		int choixPiece;
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println(echiquierSurLequelOnjoue);
+		choixPiece=sc.nextInt(); // gerer si le nombre n'est pas correcte
+		
+		
+		
 
 	}
+	
+	public String toString()
+	{
+		return nomDujoueur;
+	}
+	
 
 }

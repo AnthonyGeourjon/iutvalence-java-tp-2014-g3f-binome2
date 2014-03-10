@@ -13,8 +13,10 @@ public class Position
 	private final int colonne;
 
 	/**
-	 * @param nouvellePositionColonne de la piece
-	 * @param nouvellePositionLigne de la piece
+	 * @param nouvellePositionColonne
+	 *            de la piece
+	 * @param nouvellePositionLigne
+	 *            de la piece
 	 */
 	public Position(int nouvellePositionColonne, int nouvellePositionLigne)
 	{
@@ -22,6 +24,9 @@ public class Position
 		this.ligne = nouvellePositionLigne;
 	}
 
-
+	public String toString()
+	{
+		return ("(" + colonne + "," + ligne + ")");
+	}
 
 }

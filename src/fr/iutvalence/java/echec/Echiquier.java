@@ -8,11 +8,32 @@ public class Echiquier
 {
 
 	/** Nombre de lignes d'un échiquier. */
-	public static final int NOMBRE_LIGNE_ECHIQUIER = 8;
+	public static final int NOMBRES_LIGNES_ECHIQUIER = 8;
+
+	/**
+	 * Nombre de pièces sur l'échiquier
+	 */
+	private static final int NOMBRE_DE_PIECES = 32;
 
 	/** Nombre de colonne de l'échiquier. */
-	public static int NOMBRE_COLONNE_ECHIQUIER = 8;
+	public static int NOMBRES_COLONNES_ECHIQUIER = 8;
 
 	/** Pieces du joueur. */
 	private Piece[] piecesSurLEchiquier;
+
+	public Echiquier()
+	{
+		this.piecesSurLEchiquier = new Piece[NOMBRE_DE_PIECES];
+	}
+
+	public String toString()
+	{
+		String representationEchiquier = "";
+		for(int i=0; i<NOMBRE_DE_PIECES; i++)
+			representationEchiquier+=("Pièce numéro " + i + piecesSurLEchiquier[i].toString()+"\n");
+		return representationEchiquier;
+			
+			
+		
+	}
 }

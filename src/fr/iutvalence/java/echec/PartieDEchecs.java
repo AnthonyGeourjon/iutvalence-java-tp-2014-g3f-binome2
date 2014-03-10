@@ -33,14 +33,14 @@ public class PartieDEchecs
 	/**
 	 * Deroulement d'une partie d'échec
 	 */
-	public void jouer()
+	public void jouer(Echiquier echiquierSurLequelOnjoue)
 	{
 		boolean fin = false;
 
 		while (!fin)
 		{
-			this.joueurBlanc.deplacerPiece();
-			this.joueurNoir.deplacerPiece();
+			this.joueurBlanc.deplacerPiece(echiquierSurLequelOnjoue);
+			this.joueurNoir.deplacerPiece(echiquierSurLequelOnjoue);
 			this.compteurDeTours++;
 		}
 	}

@@ -4,11 +4,11 @@ package fr.iutvalence.java.echec;
 /**
  * The Class Pieces.
  */
-public class Piece
+public abstract class Piece
 {
 	
 	/** Position de la pièce. */
-	public Position positionDeLaPiece ;
+	private Position positionDeLaPiece ;
 	
 
 	/** Deplacement de la pièce  */

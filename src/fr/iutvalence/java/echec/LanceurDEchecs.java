@@ -6,14 +6,16 @@ package fr.iutvalence.java.echec;
 public class LanceurDEchecs
 {
 
-	// TODO écrire un commentaire
+	/**
+	 * Entrée application
+	 * @param args inutile ici
+	 */
+	
 	public static void main(String[] args)
 	{
-		System.out.println("Création d'une partie d'échec");
+		
 		PartieDEchecs partieDEchec = new PartieDEchecs();
-		System.out.println("Démarrage d'une partie");
-		partieDEchec.jouer(partieDEchec.echiquier);
-		System.out.println("Fin de la partie.");
+
 
 	}
 

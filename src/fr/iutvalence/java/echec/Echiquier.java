@@ -18,9 +18,11 @@ public class Echiquier
 	/** Nombre de colonne de l'échiquier. */
 	public static int NOMBRES_COLONNES_ECHIQUIER = 8;
 
+	// TODO corriger le commentaire
 	/** Pieces du joueur. */
 	private Piece[] piecesSurLEchiquier;
 
+	// TODO écrire un commentaire
 	public Echiquier()
 	{
 		this.piecesSurLEchiquier = new Piece[NOMBRE_DE_PIECES];
@@ -32,8 +34,5 @@ public class Echiquier
 		for(int i=0; i<NOMBRE_DE_PIECES; i++)
 			representationEchiquier+=("Pièce numéro " + i + piecesSurLEchiquier[i].toString()+"\n");
 		return representationEchiquier;
-			
-			
-		
 	}
 }

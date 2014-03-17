@@ -6,7 +6,7 @@ package fr.iutvalence.java.echec;
 public class Position
 {
 
-	/** Ligne de la postion. */
+	/** Ligne de la position. */
 	private final int ligne;
 
 	/** Colonne de la position. */
@@ -24,6 +24,7 @@ public class Position
 		this.ligne = nouvellePositionLigne;
 	}
 
+	// TODO écrire un commentaire
 	public String toString()
 	{
 		return ("(" + colonne + "," + ligne + ")");

@@ -33,6 +33,7 @@ public class PartieDEchecs
 	/**
 	 * Deroulement d'une partie d'échec
 	 */
+	// TODO le parametre est redondant avec l'attribut
 	public void jouer(Echiquier echiquierSurLequelOnjoue)
 	{
 		boolean fin = false;

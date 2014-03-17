@@ -16,16 +16,20 @@ public abstract class Piece
 
 	/**
 	 * Deplacement de la pièce
-	 * @param nouvellePosition devient la position de la pièce
+	 * 
+	 * @param nouvellePosition
+	 *            devient la position de la pièce
 	 */
 	public void deplacer(Position nouvellePosition)
 	{
 		this.positionDeLaPiece = nouvellePosition;
 	}
-	
+
+	// TODO écrire un commentaire
 	public String toString()
 	{
-		return ("Le propriétaire est " + propriétaire + ", sa position est " + positionDeLaPiece + ".\n");
+		return ("Le propriétaire est " + propriétaire + ", sa position est "
+				+ positionDeLaPiece + ".\n");
 	}
-	
+
 }

@@ -6,6 +6,7 @@ package fr.iutvalence.java.echec;
 public class LanceurDEchecs
 {
 
+	// TODO écrire un commentaire
 	public static void main(String[] args)
 	{
 		System.out.println("Création d'une partie d'échec");

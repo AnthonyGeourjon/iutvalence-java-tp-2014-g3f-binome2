@@ -40,9 +40,8 @@ public class PartieDEchecs
 
 		while (!fin)
 		{
-			this.joueurBlanc.deplacerPiece(echiquierSurLequelOnjoue);
-			this.joueurNoir.deplacerPiece(echiquierSurLequelOnjoue);
-			this.compteurDeTours++;
+			System.out.println(echiquierSurLequelOnjoue);
+			
 		}
 	}
 }

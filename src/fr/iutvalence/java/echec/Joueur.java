@@ -12,28 +12,32 @@ import java.util.Scanner;
 public class Joueur
 {
 
-	// TODO écrire un commentaire
+	/**
+	 * Nom du joueur qui permet de l'afficher
+	 */
+
 	private String nomDujoueur;
 
-	// TODO il faut plutot voir cette méthode comme un moyen de connaitre le
-	// choix de déplacement
-	// du joueur. Le joueur ne manipule pas l'échiquier.
 	/**
-	 * Le joueur joue: Deplace une piece.
+	 * Le joueur joue: Deplace une piec
+	 * @return le numéro de la pièce choisi a jouer
 	 */
-	public void deplacerPiece(Echiquier echiquierSurLequelOnjoue)
+	public int demanderDeplacement()
 	{
 		int choixPiece;
 		Scanner sc = new Scanner(System.in);
 
-		System.out.println(echiquierSurLequelOnjoue);
 		choixPiece = sc.nextInt(); // gerer si le nombre n'est pas correcte
+
+		return choixPiece;
 	}
 
-	// TODO écrire un commentaire
+	
 	public String toString()
 	{
-		return nomDujoueur;
+		return this.nomDujoueur;
 	}
+
+	
 
 }

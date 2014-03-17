@@ -35,4 +35,6 @@ public class Echiquier
 			representationEchiquier+=("Pièce numéro " + i + piecesSurLEchiquier[i].toString()+"\n");
 		return representationEchiquier;
 	}
+
+	
 }

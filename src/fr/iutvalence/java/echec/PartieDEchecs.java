@@ -20,6 +20,7 @@ public class PartieDEchecs
 		this.joueurBlanc = new Joueur();
 		this.joueurNoir = new Joueur();
 		this.pieces = new Piece[8][8];
+		this.pieces[5][4]=new Piece(joueurBlanc, new Position(5, 4));
 
 	}
 
@@ -37,7 +38,7 @@ public class PartieDEchecs
 				.demanderCoordonneeDeDestinationDeLaPieceJouee()); 
 		choixJoueur = joueurBlanc.demanderCoordonneeDeLaPieceAJouer();
 
-		this.pieces[choixJoueur.getCoordonneeVerticale()][choixJoueur.getCoordonneeHorizontale()].deplacer(joueurBlanc
+		this.pieces[choixJoueur.getCoordonneeVerticale()][choixJoueur.getCoordonneeHorizontale()].deplacer(joueurNoir
 				.demanderCoordonneeDeDestinationDeLaPieceJouee()); 
 
 

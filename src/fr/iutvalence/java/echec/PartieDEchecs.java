@@ -33,6 +33,12 @@ public class PartieDEchecs
 	public void jouerUnePartieDEchec(Joueur joueurBlanc, Joueur joueurNoir)
 	{
 		System.out.println(this);
+		
+		this.pieces[5][4].deplacer();
+		
+		System.out.println(this);
+		
+	
 
 
 	}

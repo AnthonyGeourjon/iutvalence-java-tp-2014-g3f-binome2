@@ -3,7 +3,8 @@ package fr.iutvalence.java.echec;
 /**
  * La classe Piece.
  */
-public class Piece {
+public class Piece
+{
 
 	/** Le proprietaire de la piece. */
 	private Joueur proprietaire;
@@ -11,40 +12,57 @@ public class Piece {
 	/** La position de la piece. */
 	private Position positionDeLaPiece;
 
+	/**
+	 * Representation en console de la piece
+	 */
 	private String repersentationTextuelle;
 
-	public Piece(Joueur joueurproprietaire, Position positionDeBase) 
+	/**
+	 * 
+	 * 
+	 * @param joueurproprietaire Assigne a une piece un proprietaire
+	 * @param positionDeBase assigne la position au debut de la partie
+	 */
+	public Piece(Joueur joueurproprietaire, Position positionDeBase)
 	{
-		this.positionDeLaPiece=positionDeBase;
-		this.proprietaire=joueurproprietaire;
-		this.repersentationTextuelle="P";
+		this.positionDeLaPiece = positionDeBase;
+		this.proprietaire = joueurproprietaire;
+		this.repersentationTextuelle = "P";
 	}
 
 	/**
 	 * Deplacer la piece (changer de position).
-	 * 
-	 * @param nouvellePosition
-	 *            la nouvelle position
 	 */
-	public void deplacer(Position nouvellePosition)
+	public void deplacer()
 	{
-		this.positionDeLaPiece = nouvellePosition;
+		Position choixJoueur ; 
+		
+		do
+		{
+			choixJoueur=this.proprietaire.demanderCoordonneeDeDestinationDeLaPieceAJouee();
+		}while(!this.deplacementCorrecte(choixJoueur));
+		
+		this.positionDeLaPiece=choixJoueur;
+		
+
 	}
 
 	/**
-	 * Retirer piece (La piece est prise).
-	 * 
-	 * @param pieceARetirer
-	 *            la piece a retirer
+	 * @param choixJoueur
+	 * @return vraie si le deplacement est correcte, faux si non 
 	 */
-	public void retirerPiece(Piece pieceARetirer) {
-		pieceARetirer = null;
-
+	private boolean deplacementCorrecte(Position choixJoueur)
+	{
+		return true;
 	}
 
+	/**
+	 * Retirer la piece de l'echiquier (La piece est prise).        l
+	 */
+	
 
-
-	public String ObtenirRepersentationTextuelle() {
+	public String ObtenirRepersentationTextuelle()
+	{
 		return repersentationTextuelle;
 	}
 

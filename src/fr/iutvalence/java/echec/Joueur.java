@@ -42,7 +42,7 @@ public class Joueur {
 	 * 
 	 * @return une position de destination
 	 */
-	public Position demanderCoordonneeDeDestinationDeLaPieceJouee() {
+	public Position demanderCoordonneeDeDestinationDeLaPieceAJouee() {
 		return demanderPositionAuJoueur();
 	}
 

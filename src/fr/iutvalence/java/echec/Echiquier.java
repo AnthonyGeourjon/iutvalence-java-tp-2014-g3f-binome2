@@ -20,7 +20,7 @@ public class Echiquier
 	public Echiquier(Joueur joueurBlanc, Joueur joueurNoir)
 	{
 		this.Cases=new Case[8][8];
-		
+
 		placerPieceSurLEchiquier(joueurBlanc, joueurNoir);
 	}
 
@@ -37,7 +37,7 @@ public class Echiquier
 			for (int coordonneHorizontale = 0; coordonneHorizontale < 8; coordonneHorizontale++)
 				this.Cases[coordonneVerticale][coordonneHorizontale] = new Case(coordonneVerticale, coordonneHorizontale,null);	
 		}
-		
+
 		this.Cases[7][7]=new Case(7, 7, new Piece(joueurBlanc));
 		this.Cases[0][0]=new Case(0, 0, new Piece(joueurNoir));
 	}
@@ -47,7 +47,7 @@ public class Echiquier
 		String affichage = "";
 
 		affichage+="*********************************\n";
-		
+
 		for (int coordonneVerticale = 0; coordonneVerticale < 8; coordonneVerticale++)
 		{
 			for (int coordonneHorizontale = 0; coordonneHorizontale < 8; coordonneHorizontale++)
@@ -56,16 +56,18 @@ public class Echiquier
 				affichage+="* ";
 				if (this.Cases[coordonneVerticale][coordonneHorizontale].obtenirPiece() != null)
 					affichage += this.Cases[coordonneVerticale][coordonneHorizontale].obtenirPiece()
-							.ObtenirRepersentationTextuelle();
+					.ObtenirRepersentationTextuelle();
 				else
 					affichage += ".";
 				affichage+=" ";
 			}
-			affichage += "*\n*********************************\n";
+			affichage += "*\n********************************\n";
 		}
-		
-		
+
+
 
 		return affichage;
 	}
+
+	
 }

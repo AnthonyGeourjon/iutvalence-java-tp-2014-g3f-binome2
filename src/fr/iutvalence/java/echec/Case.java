@@ -25,7 +25,8 @@ public class Case
 	 *            la nouvelle coordonne verticale
 	 * @param nouvelleCoordonneHorizontale
 	 *            la nouvelle coordonne horizontale
-	 * @param piecesurlaCase piece associé à la case
+	 * @param piecesurlaCase
+	 *            piece associé à la case
 	 */
 	public Case(int nouvelleCoordonneVerticale, int nouvelleCoordonneHorizontale, Piece piecesurlaCase)
 	{
@@ -62,6 +63,27 @@ public class Case
 	{
 		// TODO Auto-generated method stub
 		return this.pieceSurlaCase;
+	}
+
+	/**
+	 * @param piece
+	 *            mutateur de pieceSurLaCase
+	 */
+	public void poserPiece(Piece piece)
+	{
+		this.pieceSurlaCase = piece;
+	}
+
+	/**
+	 * Retirer la piece de la case.
+	 * 
+	 * @return la pièce qui était sur la case
+	 */
+	public Piece enleverPiece()
+	{
+		Piece anciennePiece = this.pieceSurlaCase;
+		this.pieceSurlaCase = null;
+		return anciennePiece;
 	}
 
 }

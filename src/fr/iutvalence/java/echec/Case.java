@@ -1,57 +1,67 @@
 package fr.iutvalence.java.echec;
 
+/**
+ * @author geourjoa Cases d'un echiquier
+ */
 public class Case
 {
-	
-	
+
+	/**
+	 * Piece presente sur la case, null si il n'y pas de piece
+	 */
 	private Piece pieceSurlaCase;
-	
+
 	/** La coordonne verticale. */
 	private int coordonneVerticale;
 
 	/** La coordonnee horizontale. */
-	
+
 	private int coordonneeHorizontale;
 
 	/**
 	 * Cree une nouvelle position.
-	 *
-	 * @param nouvelleCoordonneVerticale the nouvelle coordonne verticale
-	 * @param nouvelleCoordonneHorizontale the nouvelle coordonne horizontale
+	 * 
+	 * @param nouvelleCoordonneVerticale
+	 *            la nouvelle coordonne verticale
+	 * @param nouvelleCoordonneHorizontale
+	 *            la nouvelle coordonne horizontale
+	 * @param piecesurlaCase piece associé à la case
 	 */
 	public Case(int nouvelleCoordonneVerticale, int nouvelleCoordonneHorizontale, Piece piecesurlaCase)
 	{
 		this.coordonneVerticale = nouvelleCoordonneVerticale;
 		this.coordonneeHorizontale = nouvelleCoordonneHorizontale;
-		this.pieceSurlaCase=piecesurlaCase;
-		
+		this.pieceSurlaCase = piecesurlaCase;
+
 	}
 
 	/**
 	 * Obtenir la coordonnee verticale.
-	 *
+	 * 
 	 * @return la coordonnee verticale
 	 */
 	public int getCoordonneeVerticale()
 	{
-		return coordonneVerticale;
+		return this.coordonneVerticale;
 	}
 
 	/**
 	 * Obtenir la coordonnee horizontale.
-	 *
+	 * 
 	 * @return la coordonnee horizontale
 	 */
 	public int getCoordonneeHorizontale()
 	{
-		return coordonneeHorizontale;
+		return this.coordonneeHorizontale;
 	}
 
+	/**
+	 * @return la piece presente sur la case
+	 */
 	public Piece obtenirPiece()
 	{
 		// TODO Auto-generated method stub
-		return pieceSurlaCase;
+		return this.pieceSurlaCase;
 	}
-	
 
 }

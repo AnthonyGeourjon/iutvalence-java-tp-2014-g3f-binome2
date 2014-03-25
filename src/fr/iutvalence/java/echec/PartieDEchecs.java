@@ -1,5 +1,9 @@
 package fr.iutvalence.java.echec;
 
+/**
+ * @author geourjoa
+ * represente une partie d'echec
+ */
 public class PartieDEchecs
 {
 	
@@ -9,6 +13,9 @@ public class PartieDEchecs
 	/** Le joueur noir. */
 	private Joueur joueurNoir;
 	
+	/**
+	 * SupportDuJeu
+	 */
 	private Echiquier echiquierDeJeu;
 
 	
@@ -25,9 +32,6 @@ public class PartieDEchecs
 
 	/**
 	 * Jouer une partie d echec. Le joueur blanc deplace une piece puis le joueur noire fait de meme.
-	 *
-	 * @param joueurBlanc le joueur blanc
-	 * @param joueurNoir le joueur noir
 	 */
 	public void jouerUnePartieDEchec()
 	{

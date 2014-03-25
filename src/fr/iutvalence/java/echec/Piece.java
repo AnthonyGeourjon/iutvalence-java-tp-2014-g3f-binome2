@@ -28,7 +28,7 @@ public class Piece
 	 */
 	public String ObtenirRepersentationTextuelle()
 	{
-		if (proprietaire.getCouleurDuJoueur()==Couleur.Blanc)
+		if (this.proprietaire.getCouleurDuJoueur()==Couleur.Blanc)
 			return "P";
 		return "p";
 	}

@@ -29,6 +29,7 @@ public class Echiquier
 	 * @param joueurBlanc idem que Echiquier()
 	 * @param joueurNoir idem
 	 */
+
 	private void placerPieceSurLEchiquier(Joueur joueurBlanc, Joueur joueurNoir)
 	{
 		for (int coordonneVerticale = 0; coordonneVerticale < 8; coordonneVerticale++)
@@ -45,19 +46,25 @@ public class Echiquier
 	{
 		String affichage = "";
 
+		affichage+="*********************************\n";
+		
 		for (int coordonneVerticale = 0; coordonneVerticale < 8; coordonneVerticale++)
 		{
 			for (int coordonneHorizontale = 0; coordonneHorizontale < 8; coordonneHorizontale++)
 			{
 
+				affichage+="* ";
 				if (this.Cases[coordonneVerticale][coordonneHorizontale].obtenirPiece() != null)
 					affichage += this.Cases[coordonneVerticale][coordonneHorizontale].obtenirPiece()
 							.ObtenirRepersentationTextuelle();
 				else
 					affichage += ".";
+				affichage+=" ";
 			}
-			affichage += "\n";
+			affichage += "*\n*********************************\n";
 		}
+		
+		
 
 		return affichage;
 	}

@@ -32,15 +32,28 @@ public class PartieDEchecs
 	 */
 	public void jouerUnePartieDEchec(Joueur joueurBlanc, Joueur joueurNoir)
 	{
-		Position choixJoueur = joueurBlanc.demanderCoordonneeDeLaPieceAJouer();
-
-		this.pieces[choixJoueur.getCoordonneeVerticale()][choixJoueur.getCoordonneeHorizontale()].deplacer(joueurBlanc
-				.demanderCoordonneeDeDestinationDeLaPieceJouee()); 
-		choixJoueur = joueurBlanc.demanderCoordonneeDeLaPieceAJouer();
-
-		this.pieces[choixJoueur.getCoordonneeVerticale()][choixJoueur.getCoordonneeHorizontale()].deplacer(joueurNoir
-				.demanderCoordonneeDeDestinationDeLaPieceJouee()); 
+		System.out.println(this);
 
 
+	}
+	
+	public String toString() 
+	{
+		String affichage = "" ;
+		
+		for(int coordonneVerticale = 0 ; coordonneVerticale < 8 ; coordonneVerticale++)
+		{
+			for(int coordonneHorizontale = 0 ; coordonneHorizontale < 8 ; coordonneHorizontale ++)
+			{
+				
+				if  (this.pieces[coordonneVerticale][coordonneHorizontale]!=null)
+					affichage+=this.pieces[coordonneVerticale][coordonneHorizontale].ObtenirRepersentationTextuelle();
+				else
+					affichage+=".";
+			}
+			affichage+="\n";
+		}
+		
+		return affichage;
 	}
 }

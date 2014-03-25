@@ -16,7 +16,7 @@ public class LanceurDEchecs
 		
 		PartieDEchecs partieDEchec = new PartieDEchecs();
 		
-		partieDEchec.jouerUnePartieDEchec(new Joueur(), new Joueur());
+		partieDEchec.jouerUnePartieDEchec();
 
 
 	}

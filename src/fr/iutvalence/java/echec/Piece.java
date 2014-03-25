@@ -3,16 +3,16 @@ package fr.iutvalence.java.echec;
 /**
  * La classe Piece.
  */
-public class Piece
+public abstract class Piece
 {
 
 	/** Le proprietaire de la piece. */
-	private Joueur proprietaire;
+	protected Joueur proprietaire;
 
 	/**
 	 * Representation en console de la piece
 	 */
-	private String repersentationTextuelle;
+	protected String representationTextuelle;
 
 	/**
 	 * @param joueurproprietaire
@@ -26,11 +26,9 @@ public class Piece
 	/**
 	 * @return une chaine de caractere representant l'echiquier
 	 */
-	public String ObtenirRepersentationTextuelle()
+	public String ObtenirRepresentationTextuelle()
 	{
-		if (this.proprietaire.getCouleurDuJoueur()==Couleur.Blanc)
-			return "P";
-		return "p";
+		return this.representationTextuelle;
 	}
 
 }

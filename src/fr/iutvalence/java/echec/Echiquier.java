@@ -38,8 +38,10 @@ public class Echiquier
 				this.Cases[coordonneVerticale][coordonneHorizontale] = new Case(coordonneVerticale, coordonneHorizontale,null);	
 		}
 
-		this.Cases[7][7]=new Case(7, 7, new Piece(joueurBlanc));
-		this.Cases[0][0]=new Case(0, 0, new Piece(joueurNoir));
+		this.Cases[7][7]=new Case(7, 7, new Pion(joueurBlanc));
+		this.Cases[0][0]=new Case(0, 0, new Pion(joueurNoir));
+		this.Cases[3][3]=new Case (3, 3, new Cavalier(joueurBlanc));
+		this.Cases[4][4]=new Case (4, 4, new Cavalier(joueurNoir));
 	}
 
 	public String toString()
@@ -56,7 +58,7 @@ public class Echiquier
 				affichage+="* ";
 				if (this.Cases[coordonneVerticale][coordonneHorizontale].obtenirPiece() != null)
 					affichage += this.Cases[coordonneVerticale][coordonneHorizontale].obtenirPiece()
-					.ObtenirRepersentationTextuelle();
+					.ObtenirRepresentationTextuelle();
 				else
 					affichage += ".";
 				affichage+=" ";

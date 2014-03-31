@@ -6,12 +6,6 @@ package fr.iutvalence.java.echec;
 public class PartieDEchecs
 {
 
-	/** Le joueur blanc. */
-	private Joueur joueurBlanc;
-
-	/** Le joueur noir. */
-	private Joueur joueurNoir;
-
 	/**
 	 * SupportDuJeu
 	 */
@@ -22,8 +16,7 @@ public class PartieDEchecs
 	 */
 	public PartieDEchecs()
 	{
-		this.joueurBlanc = new Joueur(Couleur.BLANC);
-		this.joueurNoir = new Joueur(Couleur.NOIR);
+
 		this.echiquierDeJeu = new Echiquier();
 	}
 
@@ -33,18 +26,12 @@ public class PartieDEchecs
 	 */
 	public void jouerUnePartieDEchec()
 	{
-		
-		
-		
-			System.out.println(this.echiquierDeJeu.toString());
-			
-			echiquierDeJeu.deplacerPiece(echiquierDeJeu.obtenirCase(6,6), echiquierDeJeu.obtenirCase(5,5));
-			
-			System.out.println(this.echiquierDeJeu.toString());
-			
-		
-		
-		
+
+		System.out.println(this.echiquierDeJeu.toString());
+
+		echiquierDeJeu.deplacerPiece(echiquierDeJeu.obtenirCase(6, 6), echiquierDeJeu.obtenirCase(5, 5));
+
+		System.out.println(this.echiquierDeJeu.toString());
 
 	}
 

@@ -1,4 +1,4 @@
-package fr.iutvalence.java.echec;
+package fr.iutvalence.java.echec.Exception;
 
 public class DeplacementNonValideException extends Exception
 {

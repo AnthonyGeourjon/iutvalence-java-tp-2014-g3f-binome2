@@ -1,9 +1,11 @@
 package fr.iutvalence.java.echec;
 
+import fr.iutvalence.java.echec.Exception.PiecedeMemeCouleurException;
+
 /**
  * Cases d'un echiquier
  * 
- * @author geourjoa 
+ * @author geourjoa
  */
 public class Case
 {
@@ -14,13 +16,13 @@ public class Case
 
 	/**
 	 * Cree une nouvelle case, intialement vide.
-	 *
+	 * 
 	 */
 	public Case()
 	{
 		this.piecePosee = null;
 	}
-	
+
 	/**
 	 * Cree une nouvelle case, avec une pièce déjà posée.
 	 * 
@@ -34,6 +36,7 @@ public class Case
 
 	/**
 	 * Obtenir la pièce posée sur la case
+	 * 
 	 * @return la piece posée sur la case si elle existe, <tt>null</tt> sinon
 	 */
 	public Piece obtenirPiece()
@@ -44,18 +47,15 @@ public class Case
 
 	/**
 	 * Poser une pièce sur la case
+	 * 
 	 * @param piece
 	 *            la pièce à poser sur la case
 	 */
-	// TODO cas d'erreur ?
 	public void poserPiece(Piece piece) throws PiecedeMemeCouleurException
 	{
-		
-	
-		
-		
-		if ((piecePosee!=null)&&(piece.obtenirCouleur()==this.piecePosee.obtenirCouleur())  )
-			throw new PiecedeMemeCouleurException(); 
+
+		if ((piecePosee != null) && (piece.obtenirCouleur() == this.piecePosee.obtenirCouleur()))
+			throw new PiecedeMemeCouleurException();
 		else
 			this.piecePosee = piece;
 	}

@@ -1,5 +1,7 @@
 package fr.iutvalence.java.echec;
 
+import fr.iutvalence.java.echec.Exception.PiecedeMemeCouleurException;
+
 /**
  * @author geourjoa Represente la plateau de jeu
  */

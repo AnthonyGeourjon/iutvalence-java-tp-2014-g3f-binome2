@@ -33,7 +33,15 @@ public class PartieDEchecs
 	 */
 	public void jouerUnePartieDEchec()
 	{
-		System.out.println(this.echiquierDeJeu.toString());
+		
+		
+		
+			System.out.println(this.echiquierDeJeu.toString());
+			echiquierDeJeu.deplacerPiece(echiquierDeJeu.Cases [4][4], echiquierDeJeu.Cases[6][6]);
+			System.out.println(this.echiquierDeJeu.toString());
+		
+		
+		
 		
 
 	}

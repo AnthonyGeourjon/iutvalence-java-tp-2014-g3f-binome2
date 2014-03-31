@@ -19,7 +19,7 @@ public class Echiquier
 	/**
 	 * Ensemble des cases du jeu  
 	 */
-	private Case[][] Cases;
+	public Case[][] Cases;
 
 	/**
 	 * Cree un nouvel echiquier, contenant des pieces de deux joueurs differents
@@ -35,7 +35,7 @@ public class Echiquier
 	}
 
 	/**
-	 * Factorisation du code du constructeur ! 
+	 * Factorisation du code du constructeur.
 	 * @param joueurBlanc idem que Echiquier()
 	 * @param joueurNoir idem
 	 */
@@ -89,10 +89,13 @@ public class Echiquier
 		return affichage;
 	}
 	
-	public void deplacerPiece(int nouvelleCoordonneVertical, int nouvelleCoordonneHorirontal, Case caseDeLaPieceADeplacer)
+	public void deplacerPiece(Case caseDestination, Case caseDeLaPieceADeplacer)
 	{
-		Cases[nouvelleCoordonneVertical][nouvelleCoordonneHorirontal].poserPiece(caseDeLaPieceADeplacer.obtenirPiece());
+		caseDestination.poserPiece(caseDeLaPieceADeplacer.obtenirPiece());
 	}
 
-	
+	public Case obtenirCase(int coordonneVertical, int coordonneHorizontal)
+	{
+		return Cases[coordonneVertical][coordonneHorizontal];
+	}
 }

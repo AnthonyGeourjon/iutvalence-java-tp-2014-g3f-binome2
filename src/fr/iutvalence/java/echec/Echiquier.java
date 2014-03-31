@@ -70,6 +70,11 @@ public class Echiquier
 
 		return affichage;
 	}
+	
+	public void deplacerPiece(int nouvelleCoordonneVertical, int nouvelleCoordonneHorirontal, Case caseDeLaPieceADeplacer)
+	{
+		Cases[nouvelleCoordonneVertical][nouvelleCoordonneHorirontal].poserPiece(caseDeLaPieceADeplacer.obtenirPiece());
+	}
 
 	
 }

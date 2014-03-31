@@ -7,6 +7,16 @@ package fr.iutvalence.java.echec;
 public class Echiquier
 {
 	/**
+	 * Nombre de colonne de l'échiquier
+	 */
+	private static final int NOMBRE_COLONNE_ECHIQUIER = 8;
+	
+	/**
+	 * Nombre de ligne de l'échiquier
+	 */
+	private static final int NOMBRE_LIGNE_ECHIQUIER = 8;
+	
+	/**
 	 * Ensemble des cases du jeu  
 	 */
 	private Case[][] Cases;
@@ -38,17 +48,25 @@ public class Echiquier
 				this.Cases[coordonneVerticale][coordonneHorizontale] = new Case(coordonneVerticale, coordonneHorizontale,null);	
 		}
 
-		this.Cases[7][7]=new Case(7, 7, new Pion(joueurBlanc));
-		this.Cases[0][0]=new Case(0, 0, new Pion(joueurNoir));
-		this.Cases[3][3]=new Case (3, 3, new Cavalier(joueurBlanc));
-		this.Cases[4][4]=new Case (4, 4, new Cavalier(joueurNoir));
+		
+		for (int i=0; i<NOMBRE_COLONNE_ECHIQUIER; i++)
+		{
+			this.Cases[6][i]=new Case(7, 7, new Pion(joueurBlanc));
+			this.Cases[1][i]=new Case(7, 7, new Pion(joueurNoir));
+		}
+		
+		this.Cases[7][6]=new Case(7, 7, new Cavalier(joueurBlanc));
+		this.Cases[7][1]=new Case(7, 7, new Cavalier(joueurBlanc));
+		
+		
+		
 	}
 
 	public String toString()
 	{
 		String affichage = "";
 
-		affichage+="*********************************\n";
+		affichage+="**********************************\n";
 
 		for (int coordonneVerticale = 0; coordonneVerticale < 8; coordonneVerticale++)
 		{
@@ -63,7 +81,7 @@ public class Echiquier
 					affichage += ".";
 				affichage+=" ";
 			}
-			affichage += "*\n********************************\n";
+			affichage += "*\n*********************************\n";
 		}
 
 

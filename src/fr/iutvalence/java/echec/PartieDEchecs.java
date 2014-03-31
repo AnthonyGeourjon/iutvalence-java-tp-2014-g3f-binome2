@@ -22,9 +22,9 @@ public class PartieDEchecs
 	 */
 	public PartieDEchecs()
 	{
-		this.joueurBlanc = new Joueur(Couleur.Blanc);
-		this.joueurNoir = new Joueur(Couleur.Noire);
-		this.echiquierDeJeu = new Echiquier(this.joueurBlanc, this.joueurNoir);
+		this.joueurBlanc = new Joueur(Couleur.BLANC);
+		this.joueurNoir = new Joueur(Couleur.NOIR);
+		this.echiquierDeJeu = new Echiquier();
 	}
 
 	/**
@@ -37,9 +37,11 @@ public class PartieDEchecs
 		
 		
 			System.out.println(this.echiquierDeJeu.toString());
-			echiquierDeJeu.deplacerPiece(echiquierDeJeu.Cases [4][4], echiquierDeJeu.Cases[6][6]);
+			
+			echiquierDeJeu.deplacerPiece(echiquierDeJeu.obtenirCase(6,6), echiquierDeJeu.obtenirCase(5,5));
+			
 			System.out.println(this.echiquierDeJeu.toString());
-		
+			
 		
 		
 		

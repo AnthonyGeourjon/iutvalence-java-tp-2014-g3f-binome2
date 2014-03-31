@@ -1,88 +1,75 @@
 package fr.iutvalence.java.echec;
 
 /**
- * @author geourjoa Cases d'un echiquier
+ * Cases d'un echiquier
+ * 
+ * @author geourjoa 
  */
 public class Case
 {
+	/**
+	 * Piece posée sur la case si elle existe, <tt>null</tt> sinon
+	 */
+	private Piece piecePosee;
 
 	/**
-	 * Piece presente sur la case, null si il n'y pas de piece
+	 * Cree une nouvelle case, intialement vide.
+	 *
 	 */
-	private Piece pieceSurlaCase;
-
-	/** La coordonne verticale. */
-	private int coordonneVerticale;
-
-	/** La coordonnee horizontale. */
-
-	private int coordonneeHorizontale;
-
-	/**
-	 * Cree une nouvelle position.
-	 * 
-	 * @param nouvelleCoordonneVerticale
-	 *            la nouvelle coordonne verticale
-	 * @param nouvelleCoordonneHorizontale
-	 *            la nouvelle coordonne horizontale
-	 * @param piecesurlaCase
-	 *            piece associé à la case
-	 */
-	public Case(int nouvelleCoordonneVerticale, int nouvelleCoordonneHorizontale, Piece piecesurlaCase)
+	public Case()
 	{
-		this.coordonneVerticale = nouvelleCoordonneVerticale;
-		this.coordonneeHorizontale = nouvelleCoordonneHorizontale;
-		this.pieceSurlaCase = piecesurlaCase;
-
+		this.piecePosee = null;
+	}
+	
+	/**
+	 * Cree une nouvelle case, avec une pièce déjà posée.
+	 * 
+	 * @param piece
+	 *            piece à poser sur la case
+	 */
+	public Case(Piece piece)
+	{
+		this.piecePosee = piece;
 	}
 
 	/**
-	 * Obtenir la coordonnee verticale.
-	 * 
-	 * @return la coordonnee verticale
-	 */
-	public int getCoordonneeVerticale()
-	{
-		return this.coordonneVerticale;
-	}
-
-	/**
-	 * Obtenir la coordonnee horizontale.
-	 * 
-	 * @return la coordonnee horizontale
-	 */
-	public int getCoordonneeHorizontale()
-	{
-		return this.coordonneeHorizontale;
-	}
-
-	/**
-	 * @return la piece presente sur la case
+	 * Obtenir la pièce posée sur la case
+	 * @return la piece posée sur la case si elle existe, <tt>null</tt> sinon
 	 */
 	public Piece obtenirPiece()
 	{
 		// TODO Auto-generated method stub
-		return this.pieceSurlaCase;
+		return this.piecePosee;
 	}
 
 	/**
+	 * Poser une pièce sur la case
 	 * @param piece
-	 *            mutateur de pieceSurLaCase
+	 *            la pièce à poser sur la case
 	 */
-	public void poserPiece(Piece piece)
+	// TODO cas d'erreur ?
+	public void poserPiece(Piece piece) throws PiecedeMemeCouleurException
 	{
-		this.pieceSurlaCase = piece;
+		
+	
+		
+		
+		if ((piecePosee!=null)&&(piece.obtenirCouleur()==this.piecePosee.obtenirCouleur())  )
+			throw new PiecedeMemeCouleurException(); 
+		else
+			this.piecePosee = piece;
 	}
 
 	/**
 	 * Retirer la piece de la case.
 	 * 
+	 * 
 	 * @return la pièce qui était sur la case
 	 */
 	public Piece enleverPiece()
 	{
-		Piece anciennePiece = this.pieceSurlaCase;
-		this.pieceSurlaCase = null;
+		Piece anciennePiece = this.piecePosee;
+		this.piecePosee = null;
 		return anciennePiece;
 	}
 

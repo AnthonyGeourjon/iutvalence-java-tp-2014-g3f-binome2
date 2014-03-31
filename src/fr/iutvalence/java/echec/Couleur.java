@@ -6,10 +6,17 @@ public enum Couleur
 	/**
 	 * La couleur blanche
 	 */
-	Blanc,
+	BLANC,
 	
 	/**
 	 * La couleur noire
 	 */
-	Noire;
+	NOIR;
+
+	@Override
+	public String toString() 
+	{
+	if (this == BLANC) return "b";
+	return "n";
+	}
 }

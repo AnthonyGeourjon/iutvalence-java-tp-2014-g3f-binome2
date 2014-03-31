@@ -3,13 +3,14 @@ package fr.iutvalence.java.echec;
 public class Pion extends Piece
 {
 
-	public Pion(Joueur joueurproprietaire)
+	public Pion(Couleur couleur)
 	{
-		super(joueurproprietaire);
-		if(super.proprietaire.getCouleurDuJoueur()==Couleur.Blanc)
-			super.representationTextuelle="P";
-		else
-			super.representationTextuelle="p";
+		super(couleur);
 	}
+
+	@Override
+	public String toString() {
+		return "P"+ this.obtenirCouleur().toString();
+	}	
 
 }

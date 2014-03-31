@@ -6,29 +6,21 @@ package fr.iutvalence.java.echec;
 public abstract class Piece
 {
 
-	/** Le proprietaire de la piece. */
-	protected Joueur proprietaire;
-
 	/**
-	 * Representation en console de la piece
+	 *  Couleur de la pièce
 	 */
-	protected String representationTextuelle;
+	private final Couleur couleur;
 
-	/**
-	 * @param joueurproprietaire
-	 *            Assigne a une piece un proprietaire
-	 */
-	public Piece(Joueur joueurproprietaire)
+	
+	public Piece(Couleur couleur)
 	{
-		this.proprietaire = joueurproprietaire;
+		this.couleur = couleur;
+	}
+	
+	public Couleur obtenirCouleur()
+	{
+		return this.couleur;
 	}
 
-	/**
-	 * @return une chaine de caractere representant l'echiquier
-	 */
-	public String ObtenirRepresentationTextuelle()
-	{
-		return this.representationTextuelle;
-	}
-
+	
 }

@@ -1,4 +1,6 @@
-package fr.iutvalence.java.echec;
+package fr.iutvalence.java.echec.Piece;
+
+import fr.iutvalence.java.echec.Couleur;
 
 public class Pion extends Piece
 {

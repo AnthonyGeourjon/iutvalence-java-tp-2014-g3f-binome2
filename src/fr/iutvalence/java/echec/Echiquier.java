@@ -1,6 +1,7 @@
 package fr.iutvalence.java.echec;
 
 import fr.iutvalence.java.echec.Exception.PiecedeMemeCouleurException;
+import fr.iutvalence.java.echec.Piece.Pion;
 
 /**
  * @author geourjoa Represente la plateau de jeu
@@ -44,6 +45,8 @@ public class Echiquier
 
 	private void placerPieceSurLEchiquier()
 	{
+		// TODO Finir de plcare les piece, gerer les deplacement vaide
+		
 		for (int numeroDeLigne = 0; numeroDeLigne < NOMBRE_DE_LIGNES; numeroDeLigne++)
 			for (int numeroDeColonne = 0; numeroDeColonne < NOMBRE_DE_COLONNES; numeroDeColonne++)
 				this.Cases[numeroDeLigne][numeroDeColonne] = new Case();
@@ -57,7 +60,6 @@ public class Echiquier
 			}
 			catch (PiecedeMemeCouleurException e)
 			{
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}

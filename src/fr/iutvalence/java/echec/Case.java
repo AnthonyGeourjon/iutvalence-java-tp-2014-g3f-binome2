@@ -1,6 +1,7 @@
 package fr.iutvalence.java.echec;
 
 import fr.iutvalence.java.echec.Exception.PiecedeMemeCouleurException;
+import fr.iutvalence.java.echec.Piece.Piece;
 
 /**
  * Cases d'un echiquier

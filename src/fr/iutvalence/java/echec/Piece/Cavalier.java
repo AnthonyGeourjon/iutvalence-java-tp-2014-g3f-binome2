@@ -1,6 +1,7 @@
 package fr.iutvalence.java.echec.Piece;
 
 import fr.iutvalence.java.echec.Couleur;
+import fr.iutvalence.java.echec.Position;
 
 public class Cavalier extends Piece
 {
@@ -22,5 +23,12 @@ public class Cavalier extends Piece
 	{
 		return "C" + this.obtenirCouleur().toString();
 	}
+
+	@Override
+    public boolean verifierDeplacement(Position positionDepart, Position positionDestination)
+    {
+	    // TODO Auto-generated method stub
+	    return true;
+    }
 
 }

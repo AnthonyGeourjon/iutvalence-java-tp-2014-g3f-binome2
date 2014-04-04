@@ -1,6 +1,7 @@
 package fr.iutvalence.java.echec.Piece;
 
 import fr.iutvalence.java.echec.Couleur;
+import fr.iutvalence.java.echec.Position;
 
 public class Roi extends Piece
 {
@@ -22,5 +23,13 @@ public class Roi extends Piece
 	{
 		return "R" + this.obtenirCouleur().toString();
 	}
+
+	@Override
+    public
+    boolean verifierDeplacement(Position positionDepart, Position positionDestination)
+    {
+	    // TODO Auto-generated method stub
+	    return true;
+    }
 
 }

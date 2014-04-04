@@ -7,6 +7,16 @@ public class PartieDEchecs
 {
 
 	/**
+	 * Joueur blanc d'echec
+	 */
+	private Joueur joueurBlanc;
+	
+	/**
+	 * Joueur noir d'echec
+	 */
+	private Joueur joueurNoir;
+	
+	/**
 	 * SupportDuJeu
 	 */
 	private Echiquier echiquierDeJeu;
@@ -18,21 +28,39 @@ public class PartieDEchecs
 	{
 
 		this.echiquierDeJeu = new Echiquier();
+		this.joueurBlanc=new Joueur(Couleur.BLANC);
+		this.joueurNoir=new Joueur(Couleur.NOIR);
 	}
 
 	/**
 	 * Jouer une partie d echec. Le joueur blanc deplace une piece puis le
 	 * joueur noire fait de meme.
+	 * @param positionDepart 
+	 * @param positionDestination 
 	 */
 	public void jouerUnePartieDEchec()
 	{
 
 		System.out.println(this.echiquierDeJeu.toString());
 
-		echiquierDeJeu.deplacerPiece(echiquierDeJeu.obtenirCase(6, 6), echiquierDeJeu.obtenirCase(5, 5));
+		Position positionDepart, positionDestination;
+				
+		do
+		{
+			
+			positionDepart=this.joueurBlanc.demanderPosition();
+			positionDestination=this.joueurBlanc.demanderPosition();
+			
+		}while(!echiquierDeJeu.verifierMouvement(positionDepart, positionDestination));
+			
+			
+			echiquierDeJeu.deplacerPiece(echiquierDeJeu.obtenirCase(positionDepart), echiquierDeJeu.obtenirCase(positionDestination));
 
-		System.out.println(this.echiquierDeJeu.toString());
+			System.out.println(this.echiquierDeJeu.toString());
 
+			echiquierDeJeu.deplacerPiece(echiquierDeJeu.obtenirCase(this.joueurNoir.demanderPosition()), echiquierDeJeu.obtenirCase(this.joueurNoir.demanderPosition()));
+
+			System.out.println(this.echiquierDeJeu.toString());
 	}
 
 }

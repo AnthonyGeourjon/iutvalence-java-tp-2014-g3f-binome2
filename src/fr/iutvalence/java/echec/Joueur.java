@@ -1,5 +1,7 @@
 package fr.iutvalence.java.echec;
 
+import java.util.Scanner;
+
 /**
  * Represente un joueur d'echec.
  */
@@ -28,6 +30,24 @@ public class Joueur {
 	{
 		return this.couleurDuJoueur;
 	}
+	
+	public Position demanderPosition()
+	{
+		int choixVertical, choixHorizontal;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Saisissez la coordonnée vertical");
+		choixVertical=sc.nextInt();
+		System.out.println("Saisissez la coordonnée horizontal");
+		choixHorizontal=sc.nextInt();
+		
+		return new Position(choixHorizontal, choixVertical);
+		
+		
+	}
+	
+
 
 	
 

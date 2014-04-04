@@ -46,7 +46,7 @@ public class Echiquier
 	private void placerPieceSurLEchiquier()
 	{
 		// TODO Finir de plcare les piece, gerer les deplacement vaide
-		
+
 		for (int numeroDeLigne = 0; numeroDeLigne < NOMBRE_DE_LIGNES; numeroDeLigne++)
 			for (int numeroDeColonne = 0; numeroDeColonne < NOMBRE_DE_COLONNES; numeroDeColonne++)
 				this.Cases[numeroDeLigne][numeroDeColonne] = new Case();
@@ -92,26 +92,27 @@ public class Echiquier
 
 	public void deplacerPiece(Case caseDeLaPieceADeplacer, Case caseDestination)
 	{
-		
-	
-			
-		
-		
-		
+
 		try
-        {
-	        caseDestination.poserPiece(caseDeLaPieceADeplacer.obtenirPiece());
-	        caseDeLaPieceADeplacer.enleverPiece();
-        }
-        catch (PiecedeMemeCouleurException e)
-        {
-	        // TODO Auto-generated catch block
-	        e.printStackTrace();
-        }
+		{
+			caseDestination.poserPiece(caseDeLaPieceADeplacer.obtenirPiece());
+			caseDeLaPieceADeplacer.enleverPiece();
+		}
+		catch (PiecedeMemeCouleurException e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
-	public Case obtenirCase(int coordonneVertical, int coordonneHorizontal)
+	public Case obtenirCase(Position positionPropose)
 	{
-		return Cases[coordonneVertical][coordonneHorizontal];
+		return Cases[positionPropose.obtenirNumeroDeColonne()][positionPropose.obtenirNumeroDeLigne()];
+	}
+
+	public boolean verifierMouvement(Position positionDepart, Position positionDestination)
+	{
+		return this.Cases[positionDepart.obtenirNumeroDeLigne()][positionDepart.obtenirNumeroDeColonne()]
+		        .obtenirPiece().verifierDeplacement(positionDepart, positionDestination);
 	}
 }

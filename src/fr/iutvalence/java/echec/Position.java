@@ -48,8 +48,8 @@ public class Position {
 
 	@Override
 	public String toString() {
-		return "Position [numeroDeLigne=" + numeroDeLigne
-				+ ", numeroDeColonne=" + numeroDeColonne + "]";
+		return "Position [numeroDeColonne=" + numeroDeColonne + 
+				 ", numeroDeLigne=" + numeroDeLigne + "]";
 	}
 	
 	

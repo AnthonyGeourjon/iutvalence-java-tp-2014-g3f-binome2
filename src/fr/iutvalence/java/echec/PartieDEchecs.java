@@ -47,20 +47,21 @@ public class PartieDEchecs
 				
 		do
 		{
-			
+			System.out.println("Saisissez la case de depart puis d'arrivée.");
 			positionDepart=this.joueurBlanc.demanderPosition();
-			positionDestination=this.joueurBlanc.demanderPosition();
+		    positionDestination=this.joueurBlanc.demanderPosition();
 			
 		}while(!echiquierDeJeu.verifierMouvement(positionDepart, positionDestination));
 			
-			
+		
 			echiquierDeJeu.deplacerPiece(echiquierDeJeu.obtenirCase(positionDepart), echiquierDeJeu.obtenirCase(positionDestination));
 
+			
+
+			
 			System.out.println(this.echiquierDeJeu.toString());
 
-			echiquierDeJeu.deplacerPiece(echiquierDeJeu.obtenirCase(this.joueurNoir.demanderPosition()), echiquierDeJeu.obtenirCase(this.joueurNoir.demanderPosition()));
-
-			System.out.println(this.echiquierDeJeu.toString());
+			
 	}
 
 }

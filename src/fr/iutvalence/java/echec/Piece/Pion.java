@@ -27,7 +27,9 @@ public class Pion extends Piece
 	@Override
 	public boolean verifierDeplacement(Position positionDepart, Position positionDestination)
 	{
-		// TODO Auto-generated method stub
+		if
+		
+		
 		if((positionDepart.obtenirNumeroDeColonne()==(positionDestination.obtenirNumeroDeColonne()+1))
 				&&(positionDepart.obtenirNumeroDeLigne()==(positionDestination.obtenirNumeroDeLigne()+1)))
 						return true;

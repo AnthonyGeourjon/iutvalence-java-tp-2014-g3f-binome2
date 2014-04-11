@@ -1,12 +1,14 @@
 package fr.iutvalence.java.echec;
 
 import fr.iutvalence.java.echec.Exception.PiecedeMemeCouleurException;
+import fr.iutvalence.java.echec.Piece.Cavalier;
 import fr.iutvalence.java.echec.Piece.Pion;
 
 /**
  * @author geourjoa Represente la plateau de jeu
  */
-public class Echiquier {
+public class Echiquier
+{
 	/**
 	 * Nombre de colonne de l'échiquier
 	 */
@@ -26,7 +28,8 @@ public class Echiquier {
 	 * Cree un nouvel echiquier, avec les pièces déjà disposées
 	 * 
 	 */
-	public Echiquier() {
+	public Echiquier()
+	{
 		this.Cases = new Case[NOMBRE_DE_LIGNES][NOMBRE_DE_COLONNES];
 
 		placerPieceSurLEchiquier();
@@ -41,22 +44,34 @@ public class Echiquier {
 	 *            idem
 	 */
 
-	private void placerPieceSurLEchiquier() {
+	private void placerPieceSurLEchiquier()
+	{
 		// TODO Finir de plcare les piece, gerer les deplacement vaide
 
 		for (int numeroDeLigne = 0; numeroDeLigne < NOMBRE_DE_LIGNES; numeroDeLigne++)
 			for (int numeroDeColonne = 0; numeroDeColonne < NOMBRE_DE_COLONNES; numeroDeColonne++)
 				this.Cases[numeroDeLigne][numeroDeColonne] = new Case();
 
-		for (int numeroDeColonne = 0; numeroDeColonne < NOMBRE_DE_COLONNES; numeroDeColonne++) {
-			try {
-				this.Cases[NOMBRE_DE_LIGNES - 2][numeroDeColonne]
-						.poserPiece(new Pion(Couleur.BLANC));
-				this.Cases[1][numeroDeColonne]
-						.poserPiece(new Pion(Couleur.NOIR));
-			} catch (PiecedeMemeCouleurException e) {
+		for (int numeroDeColonne = 0; numeroDeColonne < NOMBRE_DE_COLONNES; numeroDeColonne++)
+		{
+			try
+			{
+				this.Cases[NOMBRE_DE_LIGNES - 2][numeroDeColonne].poserPiece(new Pion(Couleur.BLANC));
+				this.Cases[1][numeroDeColonne].poserPiece(new Pion(Couleur.NOIR));
+			}
+			catch (PiecedeMemeCouleurException e)
+			{
 				e.printStackTrace();
 			}
+		}
+		
+		try
+		{
+			this.Cases[0][1].poserPiece(new Cavalier(Couleur.NOIR));
+		}
+		catch (PiecedeMemeCouleurException e)
+		{
+			e.printStackTrace();
 		}
 
 	}
@@ -68,25 +83,23 @@ public class Echiquier {
 		affichage += "      *************************************************\n";
 		affichage += "      *  a  *  b  *  c  *  d  *  e  *  f  *  g  *  h  *\n";
 		affichage += "*******************************************************\n";
-		
 
 		for (int coordonneVerticale = 0; coordonneVerticale < NOMBRE_DE_COLONNES; coordonneVerticale++)
 		{
-					
-			affichage += "*  " + (coordonneVerticale + 1) + "  "  ;
-			
+
+			affichage += "*  " + (coordonneVerticale + 1) + "  ";
+
 			for (int coordonneHorizontale = 0; coordonneHorizontale < NOMBRE_DE_LIGNES; coordonneHorizontale++)
 			{
 				affichage += "* ";
-				
+
 				if (this.Cases[coordonneVerticale][coordonneHorizontale].obtenirPiece() != null)
-					{
+				{
 					affichage += this.Cases[coordonneVerticale][coordonneHorizontale].obtenirPiece().toString();
 					affichage += " ";
-					}
-				
-				else
-					affichage += ".. ";
+				}
+
+				else affichage += ".. ";
 				affichage += " ";
 			}
 			affichage += "*\n*******************************************************\n";
@@ -95,26 +108,36 @@ public class Echiquier {
 		return affichage;
 	}
 
-	public void deplacerPiece(Case caseDeLaPieceADeplacer, Case caseDestination) {
+	public void deplacerPiece(Case caseDeLaPieceADeplacer, Case caseDestination)
+	{
 
-		try {
+		try
+		{
 			caseDestination.poserPiece(caseDeLaPieceADeplacer.obtenirPiece());
 			caseDeLaPieceADeplacer.enleverPiece();
-		} catch (PiecedeMemeCouleurException e) {
+		}
+		catch (PiecedeMemeCouleurException e)
+		{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 
-	public Case obtenirCase(Position positionPropose) {
-		return Cases[positionPropose.obtenirNumeroDeColonne()][positionPropose
-				.obtenirNumeroDeLigne()];
+	public Case obtenirCase(Position positionPropose)
+	{
+		return Cases[positionPropose.obtenirNumeroDeColonne()][positionPropose.obtenirNumeroDeLigne()];
 	}
 
-	public boolean verifierMouvement(Position positionDepart,
-			Position positionDestination) {
-		return this.Cases[positionDepart.obtenirNumeroDeLigne()][positionDepart
-				.obtenirNumeroDeColonne()].obtenirPiece().verifierDeplacement(
-				positionDepart, positionDestination);
+	public boolean verifierMouvement(Position positionDepart, Position positionDestination)
+	{
+		return this.Cases[positionDepart.obtenirNumeroDeLigne()][positionDepart.obtenirNumeroDeColonne()].obtenirPiece()
+				.verifierDeplacement(positionDepart, positionDestination);
+	}
+	
+	public boolean possedeUnePiece(Position positionAVerifier)
+	{
+		if(this.Cases[positionAVerifier.obtenirNumeroDeLigne()][positionAVerifier.obtenirNumeroDeColonne()].obtenirPiece()==null)
+			return false;
+		return true;
 	}
 }

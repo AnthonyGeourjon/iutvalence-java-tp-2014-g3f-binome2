@@ -28,7 +28,22 @@ public class Pion extends Piece
 	public boolean verifierDeplacement(Position positionDepart, Position positionDestination)
 	{
 		// TODO Auto-generated method stub
-		return true;
+		if((positionDepart.obtenirNumeroDeColonne()==(positionDestination.obtenirNumeroDeColonne()+1))
+				&&(positionDepart.obtenirNumeroDeLigne()==(positionDestination.obtenirNumeroDeLigne()+1)))
+						return true;
+		
+		if((positionDepart.obtenirNumeroDeColonne()==(positionDestination.obtenirNumeroDeColonne()-1))
+				&&(positionDepart.obtenirNumeroDeLigne()==(positionDestination.obtenirNumeroDeLigne()+1)))
+						return true;
+		
+		if((positionDepart.obtenirNumeroDeColonne()==(positionDestination.obtenirNumeroDeColonne()+1))
+				&&(positionDepart.obtenirNumeroDeLigne()==(positionDestination.obtenirNumeroDeLigne()-1)))
+						return true;	
+		
+		if((positionDepart.obtenirNumeroDeColonne()==(positionDestination.obtenirNumeroDeColonne()-1))
+				&&(positionDepart.obtenirNumeroDeLigne()==(positionDestination.obtenirNumeroDeLigne()-1)))
+						return true;
+		return false;
 	}
 
 }

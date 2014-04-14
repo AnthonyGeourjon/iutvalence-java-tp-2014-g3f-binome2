@@ -1,8 +1,13 @@
 package fr.iutvalence.java.echec.Piece;
 
 import fr.iutvalence.java.echec.Couleur;
+import fr.iutvalence.java.echec.Echiquier;
 import fr.iutvalence.java.echec.Position;
 
+/**
+ * @author geourjoa
+ * Fou d'une partie d'echec
+ */
 public class Fou extends Piece
 {
 
@@ -13,9 +18,9 @@ public class Fou extends Piece
 	 * @param couleur
 	 *            couleur du fou
 	 */
-	public Fou(Couleur couleur)
+	public Fou(Couleur couleur, Echiquier echiquier)
 	{
-		super(couleur);
+		super(couleur, echiquier);
 	}
 
 	@Override
@@ -27,7 +32,6 @@ public class Fou extends Piece
 	@Override
 	public boolean verifierDeplacement(Position positionDepart, Position positionDestination)
 	{
-		// TODO Auto-generated method stub
 		return true;
 	}
 

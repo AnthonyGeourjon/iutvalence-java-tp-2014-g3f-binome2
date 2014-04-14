@@ -51,11 +51,12 @@ public class Case
 	 * 
 	 * @param piece
 	 *            la pièce à poser sur la case
+	 * @throws PiecedeMemeCouleurException levé si couleur equivalente
 	 */
 	public void poserPiece(Piece piece) throws PiecedeMemeCouleurException
 	{
 
-		if ((piecePosee != null) && (piece.obtenirCouleur() == this.piecePosee.obtenirCouleur()))
+		if ((this.piecePosee != null) && (piece.obtenirCouleur() == this.piecePosee.obtenirCouleur()))
 			throw new PiecedeMemeCouleurException();
 		else
 			this.piecePosee = piece;

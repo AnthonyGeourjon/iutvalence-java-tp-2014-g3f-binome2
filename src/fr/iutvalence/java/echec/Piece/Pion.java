@@ -1,8 +1,13 @@
 package fr.iutvalence.java.echec.Piece;
 
 import fr.iutvalence.java.echec.Couleur;
+import fr.iutvalence.java.echec.Echiquier;
 import fr.iutvalence.java.echec.Position;
 
+/**
+ * @author geourjoa
+ * Pion d'une partie d'echec
+ */
 public class Pion extends Piece
 {
 
@@ -12,10 +17,11 @@ public class Pion extends Piece
 	 * 
 	 * @param couleur
 	 *            couleur du pion
+	 * @param echiquier echiquier sur lequel le pion est.
 	 */
-	public Pion(Couleur couleur)
+	public Pion(Couleur couleur, Echiquier echiquier)
 	{
-		super(couleur);
+		super(couleur, echiquier);
 	}
 
 	@Override
@@ -27,7 +33,7 @@ public class Pion extends Piece
 	@Override
 	public boolean verifierDeplacement(Position positionDepart, Position positionDestination)
 	{
-		if
+		
 		
 		
 		if((positionDepart.obtenirNumeroDeColonne()==(positionDestination.obtenirNumeroDeColonne()+1))

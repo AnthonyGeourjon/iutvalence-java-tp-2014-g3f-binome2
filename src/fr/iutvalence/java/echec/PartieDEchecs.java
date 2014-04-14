@@ -33,10 +33,7 @@ public class PartieDEchecs
 	}
 
 	/**
-	 * Jouer une partie d echec. Le joueur blanc deplace une piece puis le
-	 * joueur noire fait de meme.
-	 * @param positionDepart 
-	 * @param positionDestination 
+	 * Jouer une partie d echec. 
 	 */
 	public void jouerUnePartieDEchec()
 	{
@@ -51,15 +48,28 @@ public class PartieDEchecs
 			positionDepart=this.joueurBlanc.demanderPosition();
 		    positionDestination=this.joueurBlanc.demanderPosition();
 			
-		}while(!echiquierDeJeu.verifierMouvement(positionDepart, positionDestination));
+		}while(!this.echiquierDeJeu.verifierMouvement(positionDepart, positionDestination));
 			
 		
-			echiquierDeJeu.deplacerPiece(echiquierDeJeu.obtenirCase(positionDepart), echiquierDeJeu.obtenirCase(positionDestination));
+			this.echiquierDeJeu.deplacerPiece(this.echiquierDeJeu.obtenirCase(positionDepart), this.echiquierDeJeu.obtenirCase(positionDestination));
 
 			
 
 			
 			System.out.println(this.echiquierDeJeu.toString());
+			
+			do
+			{
+				System.out.println("Saisissez la case de depart puis d'arrivée.");
+				positionDepart=this.joueurNoir.demanderPosition();
+			    positionDestination=this.joueurNoir.demanderPosition();
+				
+			}while(!this.echiquierDeJeu.verifierMouvement(positionDepart, positionDestination));
+				
+			
+				this.echiquierDeJeu.deplacerPiece(this.echiquierDeJeu.obtenirCase(positionDepart), this.echiquierDeJeu.obtenirCase(positionDestination));
+
+				
 
 			
 	}

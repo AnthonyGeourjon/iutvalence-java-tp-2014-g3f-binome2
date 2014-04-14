@@ -40,13 +40,13 @@ public class Joueur {
 		System.out.println("Saisissez les coordonné (ligne, colonne) -> (chiffre, lettre).");
 		reponse=sc.next();
 		
-		int choixVertical = (int) (reponse.charAt(0)-'0');
+		int numeroDeLigne = (int) (reponse.charAt(0)-'0');
 		
-		int choixHorizontal = (int) (reponse.charAt(1)-'a'+1);
+		int numeroDeColonne = (int) (reponse.charAt(1)-'a'+1);
 		
-		System.out.println( choixHorizontal + " " +  choixVertical);
+		System.out.println( numeroDeColonne + " " +  numeroDeLigne);
 		
-		return new Position(choixHorizontal-1, choixVertical-1);
+		return new Position(numeroDeLigne-1, numeroDeColonne-1);
 		
 		
 	}

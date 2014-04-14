@@ -1,6 +1,7 @@
 package fr.iutvalence.java.echec.Piece;
 
 import fr.iutvalence.java.echec.Couleur;
+import fr.iutvalence.java.echec.Echiquier;
 import fr.iutvalence.java.echec.Position;
 
 public class Reine extends Piece
@@ -13,9 +14,9 @@ public class Reine extends Piece
 	 * @param couleur
 	 *            couleur de la reine
 	 */
-	public Reine(Couleur couleur)
+	public Reine(Couleur couleur,  Echiquier echiquier)
 	{
-		super(couleur);
+		super(couleur, echiquier);
 	}
 
 	@Override

@@ -33,6 +33,8 @@ public class Fou extends Piece
 	@Override
 	public boolean verifierDeplacement(Position positionDepart, Position positionDestination)
 	{
+		// TODO Auto-generated method stub
+
 		return true;
 	}
 

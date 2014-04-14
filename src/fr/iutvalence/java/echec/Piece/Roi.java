@@ -5,8 +5,7 @@ import fr.iutvalence.java.echec.Echiquier;
 import fr.iutvalence.java.echec.Position;
 
 /**
- * @author geourjoa
- * Roi de jeu d'echec
+ * @author geourjoa Roi de jeu d'echec
  */
 public class Roi extends Piece
 {
@@ -32,10 +31,17 @@ public class Roi extends Piece
 	}
 
 	@Override
-	public boolean verifierDeplacement(Position positionDepart, Position positionDestination)
+	public boolean verifierDeplacement(Position positionDepart, Position positionArrivee)
 	{
-		// TODO Auto-generated method stub
-		return true;
+		int pdc = positionDepart.obtenirNumeroDeColonne(), pdl = positionDepart.obtenirNumeroDeLigne(), pac = positionArrivee
+				.obtenirNumeroDeColonne(), pal = positionArrivee.obtenirNumeroDeLigne();
+
+		if (pdc==pac&&pdl==pal)
+			return false;
+		if ((Math.abs(pdc-pac)<2)&&(Math.abs(pdl-pal)<2))
+				return true;
+		return false;
+		
 	}
 
 }

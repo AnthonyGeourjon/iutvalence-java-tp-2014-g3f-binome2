@@ -42,7 +42,6 @@ public class Case
 	 */
 	public Piece obtenirPiece()
 	{
-		// TODO Auto-generated method stub
 		return this.piecePosee;
 	}
 

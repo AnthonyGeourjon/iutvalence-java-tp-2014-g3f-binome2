@@ -45,7 +45,6 @@ public class Echiquier
 
 	private void placerPieceSurLEchiquier()
 	{
-		// TODO Finir de plcare les piece, gerer les deplacement vaide
 
 		for (int numeroDeLigne = 0; numeroDeLigne < NOMBRE_DE_LIGNES; numeroDeLigne++)
 			for (int numeroDeColonne = 0; numeroDeColonne < NOMBRE_DE_COLONNES; numeroDeColonne++)
@@ -137,7 +136,6 @@ public class Echiquier
 		}
 		catch (PiecedeMemeCouleurException e)
 		{
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -154,10 +152,14 @@ public class Echiquier
 	/**
 	 * @param positionDepart place intitiale de la piece
 	 * @param positionDestination place 
+	 * @param couleurJoueur 
 	 * @return vrai si le mouvement est correcte, faux sinon
 	 */
-	public boolean verifierMouvement(Position positionDepart, Position positionDestination)
+	public boolean verifierMouvement(Position positionDepart, Position positionDestination, Couleur couleurJoueur)
 	{
+		if (this.cases[positionDepart.obtenirNumeroDeLigne()][positionDepart.obtenirNumeroDeColonne()].obtenirPiece().obtenirCouleur()!=couleurJoueur)
+			return false;
+		
 		if (this.cases[positionDepart.obtenirNumeroDeLigne()][positionDepart.obtenirNumeroDeColonne()].obtenirPiece()==null)
 			return false;
 		

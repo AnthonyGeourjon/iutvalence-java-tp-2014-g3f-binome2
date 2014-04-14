@@ -157,8 +157,8 @@ public class Echiquier
 	 */
 	public boolean verifierMouvement(Position positionDepart, Position positionDestination, Couleur couleurJoueur)
 	{
-//		if (this.cases[positionDepart.obtenirNumeroDeLigne()][positionDepart.obtenirNumeroDeColonne()].obtenirPiece().obtenirCouleur()!=couleurJoueur)
-//			return false;
+		if (this.cases[positionDepart.obtenirNumeroDeLigne()][positionDepart.obtenirNumeroDeColonne()].obtenirPiece().obtenirCouleur()!=couleurJoueur)
+			return false;
 		
 		if (this.cases[positionDepart.obtenirNumeroDeLigne()][positionDepart.obtenirNumeroDeColonne()].obtenirPiece()==null)
 			return false;

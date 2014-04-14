@@ -22,6 +22,11 @@ public class PartieDEchecs
 	private Echiquier echiquierDeJeu;
 
 	/**
+	 * numero de tour de jeu
+	 */
+	private int numeroTour;
+
+	/**
 	 * Creer une partie d'echec, l'echiquier est vide
 	 */
 	public PartieDEchecs()
@@ -38,12 +43,12 @@ public class PartieDEchecs
 	public void jouerUnePartieDEchec()
 	{
 
-		System.out.println(this.echiquierDeJeu.toString());
-
 		Position positionDepart, positionDestination;
 
 		while (true)
 		{
+			System.out.println(this.toString());
+
 			do
 			{
 				System.out.println("Saisissez la case de depart puis d'arrivée.");
@@ -56,7 +61,7 @@ public class PartieDEchecs
 			this.echiquierDeJeu.deplacerPiece(this.echiquierDeJeu.obtenirCase(positionDepart),
 					this.echiquierDeJeu.obtenirCase(positionDestination));
 
-			System.out.println(this.echiquierDeJeu.toString());
+			System.out.println(this.toString());
 
 			do
 			{
@@ -69,7 +74,15 @@ public class PartieDEchecs
 
 			this.echiquierDeJeu.deplacerPiece(this.echiquierDeJeu.obtenirCase(positionDepart),
 					this.echiquierDeJeu.obtenirCase(positionDestination));
+
 		}
+
+	}
+
+	public String toString()
+	{
+
+		return ("Tour numéro : " + this.numeroTour + "\n\n" + this.echiquierDeJeu.toString() + "\n\n");
 
 	}
 

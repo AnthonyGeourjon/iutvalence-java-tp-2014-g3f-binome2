@@ -16,7 +16,7 @@ public class Case
 	private Piece piecePosee;
 
 	/**
-	 * Cree une nouvelle case, intialement vide.
+	 * Cree une nouvelle case, initialement vide.
 	 * 
 	 */
 	public Case()
@@ -50,7 +50,7 @@ public class Case
 	 * 
 	 * @param piece
 	 *            la pièce à poser sur la case
-	 * @throws PiecedeMemeCouleurException levé si couleur equivalente
+	 * @throws PiecedeMemeCouleurException levée si couleur equivalente
 	 */
 	public void poserPiece(Piece piece) throws PiecedeMemeCouleurException
 	{

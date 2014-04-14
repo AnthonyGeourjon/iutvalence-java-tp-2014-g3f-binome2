@@ -4,6 +4,9 @@ import fr.iutvalence.java.echec.Couleur;
 import fr.iutvalence.java.echec.Echiquier;
 import fr.iutvalence.java.echec.Position;
 
+/**
+ * @author geourjoa Reine de jeu d'echec
+ */
 public class Reine extends Piece
 {
 
@@ -13,8 +16,10 @@ public class Reine extends Piece
 	 * 
 	 * @param couleur
 	 *            couleur de la reine
+	 * @param echiquier
+	 *            echiquier associé à la piece
 	 */
-	public Reine(Couleur couleur,  Echiquier echiquier)
+	public Reine(Couleur couleur, Echiquier echiquier)
 	{
 		super(couleur, echiquier);
 	}

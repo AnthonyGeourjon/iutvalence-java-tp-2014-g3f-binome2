@@ -5,8 +5,7 @@ import fr.iutvalence.java.echec.Echiquier;
 import fr.iutvalence.java.echec.Position;
 
 /**
- * @author geourjoa
- * Cavalier d'une partie d'echec
+ * @author geourjoa Cavalier d'une partie d'echec
  */
 public class Cavalier extends Piece
 {
@@ -17,8 +16,10 @@ public class Cavalier extends Piece
 	 * 
 	 * @param couleur
 	 *            couleur du cavalier
+	 * @param echiquier
+	 *            echiquier associé à la piece
 	 */
-	public Cavalier(Couleur couleur,  Echiquier echiquier)
+	public Cavalier(Couleur couleur, Echiquier echiquier)
 	{
 		super(couleur, echiquier);
 	}
@@ -31,38 +32,37 @@ public class Cavalier extends Piece
 
 	public boolean verifierDeplacement(Position positionDepart, Position positionDestination)
 	{
-		if((positionDepart.obtenirNumeroDeColonne()==(positionDestination.obtenirNumeroDeColonne()+1))
-				&&(positionDepart.obtenirNumeroDeLigne()==(positionDestination.obtenirNumeroDeLigne()+2)))
-						return true;
-		
-		if((positionDepart.obtenirNumeroDeColonne()==(positionDestination.obtenirNumeroDeColonne()-1))
-				&&(positionDepart.obtenirNumeroDeLigne()==(positionDestination.obtenirNumeroDeLigne()+2)))
-						return true;
-		
-		if((positionDepart.obtenirNumeroDeColonne()==(positionDestination.obtenirNumeroDeColonne()+1))
-				&&(positionDepart.obtenirNumeroDeLigne()==(positionDestination.obtenirNumeroDeLigne()-2)))
-						return true;	
-		
-		if((positionDepart.obtenirNumeroDeColonne()==(positionDestination.obtenirNumeroDeColonne()-1))
-				&&(positionDepart.obtenirNumeroDeLigne()==(positionDestination.obtenirNumeroDeLigne()-2)))
-						return true;
-		if((positionDepart.obtenirNumeroDeColonne()==(positionDestination.obtenirNumeroDeColonne()+2))
-				&&(positionDepart.obtenirNumeroDeLigne()==(positionDestination.obtenirNumeroDeLigne()+1)))
-						return true;
-		
-		if((positionDepart.obtenirNumeroDeColonne()==(positionDestination.obtenirNumeroDeColonne()+2))
-				&&(positionDepart.obtenirNumeroDeLigne()==(positionDestination.obtenirNumeroDeLigne()-1)))
-						return true;
-		
-		if((positionDepart.obtenirNumeroDeColonne()==(positionDestination.obtenirNumeroDeColonne()-2))
-				&&(positionDepart.obtenirNumeroDeLigne()==(positionDestination.obtenirNumeroDeLigne()+1)))
-						return true;	
-		
-		if((positionDepart.obtenirNumeroDeColonne()==(positionDestination.obtenirNumeroDeColonne()-2))
-				&&(positionDepart.obtenirNumeroDeLigne()==(positionDestination.obtenirNumeroDeLigne()-1)))
-						return true;
+		if ((positionDepart.obtenirNumeroDeColonne() == (positionDestination.obtenirNumeroDeColonne() + 1))
+				&& (positionDepart.obtenirNumeroDeLigne() == (positionDestination.obtenirNumeroDeLigne() + 2)))
+			return true;
+
+		if ((positionDepart.obtenirNumeroDeColonne() == (positionDestination.obtenirNumeroDeColonne() - 1))
+				&& (positionDepart.obtenirNumeroDeLigne() == (positionDestination.obtenirNumeroDeLigne() + 2)))
+			return true;
+
+		if ((positionDepart.obtenirNumeroDeColonne() == (positionDestination.obtenirNumeroDeColonne() + 1))
+				&& (positionDepart.obtenirNumeroDeLigne() == (positionDestination.obtenirNumeroDeLigne() - 2)))
+			return true;
+
+		if ((positionDepart.obtenirNumeroDeColonne() == (positionDestination.obtenirNumeroDeColonne() - 1))
+				&& (positionDepart.obtenirNumeroDeLigne() == (positionDestination.obtenirNumeroDeLigne() - 2)))
+			return true;
+		if ((positionDepart.obtenirNumeroDeColonne() == (positionDestination.obtenirNumeroDeColonne() + 2))
+				&& (positionDepart.obtenirNumeroDeLigne() == (positionDestination.obtenirNumeroDeLigne() + 1)))
+			return true;
+
+		if ((positionDepart.obtenirNumeroDeColonne() == (positionDestination.obtenirNumeroDeColonne() + 2))
+				&& (positionDepart.obtenirNumeroDeLigne() == (positionDestination.obtenirNumeroDeLigne() - 1)))
+			return true;
+
+		if ((positionDepart.obtenirNumeroDeColonne() == (positionDestination.obtenirNumeroDeColonne() - 2))
+				&& (positionDepart.obtenirNumeroDeLigne() == (positionDestination.obtenirNumeroDeLigne() + 1)))
+			return true;
+
+		if ((positionDepart.obtenirNumeroDeColonne() == (positionDestination.obtenirNumeroDeColonne() - 2))
+				&& (positionDepart.obtenirNumeroDeLigne() == (positionDestination.obtenirNumeroDeLigne() - 1)))
+			return true;
 		return false;
-		
 
 	}
 

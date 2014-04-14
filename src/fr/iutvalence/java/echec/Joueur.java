@@ -31,6 +31,9 @@ public class Joueur {
 		return this.couleurDuJoueur;
 	}
 	
+	/**
+	 * @return une position saisie au clavier par le joueur
+	 */
 	public Position demanderPosition()
 	{
 		String reponse = new String();

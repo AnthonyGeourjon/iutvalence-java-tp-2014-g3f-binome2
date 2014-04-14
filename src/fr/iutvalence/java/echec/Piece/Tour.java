@@ -4,6 +4,10 @@ import fr.iutvalence.java.echec.Couleur;
 import fr.iutvalence.java.echec.Echiquier;
 import fr.iutvalence.java.echec.Position;
 
+/**
+ * @author geourjoa
+ * Tour d'un jeu d'echec
+ */
 public class Tour extends Piece
 {
 
@@ -13,6 +17,7 @@ public class Tour extends Piece
 	 * 
 	 * @param couleur
 	 *            couleur de la pour
+	 * @param echiquier echiquier associé à la piece
 	 */
 	public Tour(Couleur couleur, Echiquier echiquier)
 	{

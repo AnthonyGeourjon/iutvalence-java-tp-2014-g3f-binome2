@@ -152,13 +152,13 @@ public class Echiquier
 	/**
 	 * @param positionDepart place intitiale de la piece
 	 * @param positionDestination place 
-	 * @param couleurJoueur 
+	 * @param couleurJoueur couleur du joueur qui souhaite verifier son coup
 	 * @return vrai si le mouvement est correcte, faux sinon
 	 */
 	public boolean verifierMouvement(Position positionDepart, Position positionDestination, Couleur couleurJoueur)
 	{
-		if (this.cases[positionDepart.obtenirNumeroDeLigne()][positionDepart.obtenirNumeroDeColonne()].obtenirPiece().obtenirCouleur()!=couleurJoueur)
-			return false;
+//		if (this.cases[positionDepart.obtenirNumeroDeLigne()][positionDepart.obtenirNumeroDeColonne()].obtenirPiece().obtenirCouleur()!=couleurJoueur)
+//			return false;
 		
 		if (this.cases[positionDepart.obtenirNumeroDeLigne()][positionDepart.obtenirNumeroDeColonne()].obtenirPiece()==null)
 			return false;

@@ -30,12 +30,11 @@ public class PartieDEchecs
 	/**
 	 * Creer une partie d'echec, l'echiquier est vide
 	 */
-	public PartieDEchecs()
+	public PartieDEchecs(Joueur joueurBlanc, Joueur joueurNoir)
 	{
-
 		this.echiquier = new Echiquier();
-		this.joueurBlanc = new Joueur(Couleur.BLANC);
-		this.joueurNoir = new Joueur(Couleur.NOIR);
+		this.joueurBlanc = joueurBlanc;
+		this.joueurNoir = joueurNoir;
 	}
 
 	/**

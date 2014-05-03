@@ -13,8 +13,10 @@ public class LanceurDEchecs
 	
 	public static void main(String[] args)
 	{
+		Joueur joueurBlanc = new JoueurClavier(Couleur.BLANC);
+		Joueur joueurNoir = new JoueurClavier(Couleur.NOIR);	
 		
-		PartieDEchecs partieDEchec = new PartieDEchecs();
+		PartieDEchecs partieDEchec = new PartieDEchecs(joueurBlanc, joueurNoir);
 		
 		partieDEchec.jouerUnePartieDEchec();
 

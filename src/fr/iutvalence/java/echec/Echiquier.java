@@ -90,6 +90,9 @@ public class Echiquier
 
 	}
 
+	/**
+	 * @see java.lang.Object#toString()
+	 */
 	public String toString()
 	{
 		String affichage = "";

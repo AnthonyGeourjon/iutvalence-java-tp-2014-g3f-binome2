@@ -28,13 +28,19 @@ public class PartieDEchecs
 	private int numeroTour;
 
 	/**
+	 * L'affichage
+	 */
+	private Affichage affichage;
+
+	/**
 	 * Creer une partie d'echec, l'echiquier est vide
 	 */
-	public PartieDEchecs(Joueur joueurBlanc, Joueur joueurNoir)
+	public PartieDEchecs(Joueur joueurBlanc, Joueur joueurNoir, Affichage affichage)
 	{
 		this.echiquier = new Echiquier();
 		this.joueurBlanc = joueurBlanc;
 		this.joueurNoir = joueurNoir;
+		this.affichage = affichage;
 	}
 
 	/**
@@ -47,13 +53,14 @@ public class PartieDEchecs
 
 		while (true)
 		{
-			System.out.println(this.toString());
+			this.affichage.afficherTour(numeroTour, echiquier);
 
 			do
 			{
-				System.out
-						.println("Saisissez la case de depart puis d'arrivée.");
+				this.affichage.afficherDemandeDeCaseDepart();
 				positionDepart = this.joueurBlanc.demanderPosition();
+				
+				this.affichage.afficherDemandeDeCaseDArrivee();
 				positionDestination = this.joueurBlanc.demanderPosition();
 
 			}
@@ -71,13 +78,13 @@ public class PartieDEchecs
 				// TODO exception à traiter !
 			}
 
-			System.out.println(this.toString());
+			this.affichage.afficherTour(numeroTour, echiquier);
 
 			do
 			{
-				System.out
-						.println("Saisissez la case de depart puis d'arrivée.");
+				this.affichage.afficherDemandeDeCaseDepart();
 				positionDepart = this.joueurNoir.demanderPosition();
+				this.affichage.afficherDemandeDeCaseDArrivee();
 				positionDestination = this.joueurNoir.demanderPosition();
 
 			}
@@ -95,14 +102,6 @@ public class PartieDEchecs
 				// TODO exception à traiter
 			}
 		}
-	}
-
-	public String toString()
-	{
-
-		return ("Tour numéro : " + this.numeroTour + "\n\n"
-				+ this.echiquier.toString() + "\n\n");
-
 	}
 
 }

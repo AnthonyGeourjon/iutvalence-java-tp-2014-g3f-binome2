@@ -5,8 +5,9 @@ import fr.iutvalence.java.echec.Echiquier;
 import fr.iutvalence.java.echec.Position;
 
 /**
- * @author geourjoa
  * Pion d'une partie d'echec
+ * @author geourjoa
+ * 
  */
 public class Pion extends Piece
 {

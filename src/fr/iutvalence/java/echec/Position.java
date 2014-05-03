@@ -5,7 +5,8 @@ package fr.iutvalence.java.echec;
  * 
  * @author sebastienjean
  */
-public class Position {
+public class Position
+{
 	/**
 	 * Numéro de ligne
 	 */
@@ -26,7 +27,8 @@ public class Position {
 	 * @param numeroDeColonne
 	 *            colonne
 	 */
-	public Position(int numeroDeLigne, int numeroDeColonne) {
+	public Position(int numeroDeLigne, int numeroDeColonne)
+	{
 		this.numeroDeLigne = numeroDeLigne;
 		this.numeroDeColonne = numeroDeColonne;
 	}
@@ -35,23 +37,24 @@ public class Position {
 	 * 
 	 * @return le numéro de ligne
 	 */
-	public int obtenirNumeroDeLigne() {
+	public int obtenirNumeroDeLigne()
+	{
 		return this.numeroDeLigne;
 	}
 
 	/**
 	 * @return le numéro de colonne
 	 */
-	public int obtenirNumeroDeColonne() {
+	public int obtenirNumeroDeColonne()
+	{
 		return this.numeroDeColonne;
 	}
 
 	@Override
-	public String toString() {
-		return "Position [numeroDeColonne=" + this.numeroDeColonne + 
-				 ", numeroDeLigne=" + this.numeroDeLigne + "]";
+	public String toString()
+	{
+		return "Position [numeroDeColonne=" + this.numeroDeColonne
+				+ ", numeroDeLigne=" + this.numeroDeLigne + "]";
 	}
-	
-	
-	
+
 }

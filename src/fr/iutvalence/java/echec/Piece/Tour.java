@@ -5,8 +5,9 @@ import fr.iutvalence.java.echec.Echiquier;
 import fr.iutvalence.java.echec.Position;
 
 /**
- * @author geourjoa
  * Tour d'un jeu d'echec
+ * @author geourjoa
+ * 
  */
 public class Tour extends Piece
 {

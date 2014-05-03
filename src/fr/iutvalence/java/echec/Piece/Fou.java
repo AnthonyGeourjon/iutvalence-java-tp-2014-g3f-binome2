@@ -5,7 +5,8 @@ import fr.iutvalence.java.echec.Echiquier;
 import fr.iutvalence.java.echec.Position;
 
 /**
- * @author geourjoa Fou d'une partie d'echec
+ * Fou d'une partie d'echec
+ * @author geourjoa 
  */
 public class Fou extends Piece
 {

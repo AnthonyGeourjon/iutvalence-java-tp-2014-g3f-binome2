@@ -5,7 +5,8 @@ import fr.iutvalence.java.echec.Echiquier;
 import fr.iutvalence.java.echec.Position;
 
 /**
- * @author geourjoa Cavalier d'une partie d'echec
+ * Cavalier d'une partie d'echec
+ * @author geourjoa 
  */
 public class Cavalier extends Piece
 {

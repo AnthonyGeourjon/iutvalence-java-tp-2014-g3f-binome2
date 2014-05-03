@@ -5,7 +5,8 @@ import fr.iutvalence.java.echec.Echiquier;
 import fr.iutvalence.java.echec.Position;
 
 /**
- * @author geourjoa Reine de jeu d'echec
+ * Reine de jeu d'echec
+ * @author geourjoa 
  */
 public class Reine extends Piece
 {

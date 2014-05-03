@@ -1,11 +1,12 @@
 package fr.iutvalence.java.echec;
 
+import fr.iutvalence.java.echec.Exception.PiecedeMemeCouleurException;
+
 /**
  * @author geourjoa represente une partie d'echec
  */
 public class PartieDEchecs
 {
-
 	/**
 	 * Joueur blanc d'echec
 	 */
@@ -17,9 +18,9 @@ public class PartieDEchecs
 	private Joueur joueurNoir;
 
 	/**
-	 * SupportDuJeu
+	 * Echiquier
 	 */
-	private Echiquier echiquierDeJeu;
+	private Echiquier echiquier;
 
 	/**
 	 * numero de tour de jeu
@@ -32,7 +33,7 @@ public class PartieDEchecs
 	public PartieDEchecs()
 	{
 
-		this.echiquierDeJeu = new Echiquier();
+		this.echiquier = new Echiquier();
 		this.joueurBlanc = new Joueur(Couleur.BLANC);
 		this.joueurNoir = new Joueur(Couleur.NOIR);
 	}
@@ -51,38 +52,57 @@ public class PartieDEchecs
 
 			do
 			{
-				System.out.println("Saisissez la case de depart puis d'arrivée.");
+				System.out
+						.println("Saisissez la case de depart puis d'arrivée.");
 				positionDepart = this.joueurBlanc.demanderPosition();
 				positionDestination = this.joueurBlanc.demanderPosition();
 
 			}
-			while (!this.echiquierDeJeu.verifierMouvement(positionDepart, positionDestination, Couleur.BLANC));
+			while (!this.echiquier.verifierMouvement(positionDepart,
+					positionDestination, Couleur.BLANC));
 
-			this.echiquierDeJeu.deplacerPiece(this.echiquierDeJeu.obtenirCase(positionDepart),
-					this.echiquierDeJeu.obtenirCase(positionDestination));
+			try
+			{
+				this.echiquier.deplacerPiece(
+						this.echiquier.obtenirCase(positionDepart),
+						this.echiquier.obtenirCase(positionDestination));
+			}
+			catch (PiecedeMemeCouleurException e)
+			{
+				// TODO exception à traiter !
+			}
 
 			System.out.println(this.toString());
 
 			do
 			{
-				System.out.println("Saisissez la case de depart puis d'arrivée.");
+				System.out
+						.println("Saisissez la case de depart puis d'arrivée.");
 				positionDepart = this.joueurNoir.demanderPosition();
 				positionDestination = this.joueurNoir.demanderPosition();
 
 			}
-			while (!this.echiquierDeJeu.verifierMouvement(positionDepart, positionDestination, Couleur.NOIR));
+			while (!this.echiquier.verifierMouvement(positionDepart,
+					positionDestination, Couleur.NOIR));
 
-			this.echiquierDeJeu.deplacerPiece(this.echiquierDeJeu.obtenirCase(positionDepart),
-					this.echiquierDeJeu.obtenirCase(positionDestination));
-
+			try
+			{
+				this.echiquier.deplacerPiece(
+						this.echiquier.obtenirCase(positionDepart),
+						this.echiquier.obtenirCase(positionDestination));
+			}
+			catch (PiecedeMemeCouleurException e)
+			{
+				// TODO exception à traiter
+			}
 		}
-
 	}
 
 	public String toString()
 	{
 
-		return ("Tour numéro : " + this.numeroTour + "\n\n" + this.echiquierDeJeu.toString() + "\n\n");
+		return ("Tour numéro : " + this.numeroTour + "\n\n"
+				+ this.echiquier.toString() + "\n\n");
 
 	}
 

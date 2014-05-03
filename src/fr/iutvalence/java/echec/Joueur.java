@@ -7,11 +7,10 @@ import java.util.Scanner;
  */
 public class Joueur
 {
-
 	/**
-	 * Couleur du jouer. Aux echecs noirs ou blanc
+	 * Couleur associée
 	 */
-	private Couleur couleurDuJoueur;
+	private Couleur couleur;
 
 	/**
 	 * Construit un joueur
@@ -21,17 +20,17 @@ public class Joueur
 	 */
 	public Joueur(Couleur couleurDuJoueur)
 	{
-		this.couleurDuJoueur = couleurDuJoueur;
+		this.couleur = couleurDuJoueur;
 	}
 
 	/**
-	 * Obtenir la couleur du joueur
+	 * Obtenir la couleur associée
 	 * 
-	 * @return la couleur du joueur
+	 * @return la couleur associée
 	 */
-	public Couleur getCouleurDuJoueur()
+	public Couleur obtenirCouleur()
 	{
-		return this.couleurDuJoueur;
+		return this.couleur;
 	}
 
 	/**

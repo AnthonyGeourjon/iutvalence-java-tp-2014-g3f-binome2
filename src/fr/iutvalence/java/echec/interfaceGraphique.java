@@ -6,12 +6,16 @@ public class interfaceGraphique implements Runnable
 {
 
 	private JFrame fenetre;
+	
+	private echiquierGraphique echiquierGraphique;
 
 	@Override
 	public void run()
 	{
 		this.fenetre = new JFrame();
-		this.fenetre.add(new echiquierGraphique());
+		this.echiquierGraphique= new echiquierGraphique();
+		
+		this.fenetre.add(this.echiquierGraphique);
 		this.fenetre.setVisible(true);
 
 	}

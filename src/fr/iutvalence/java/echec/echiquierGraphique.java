@@ -8,24 +8,24 @@ import javax.swing.*;
 public class echiquierGraphique extends JPanel
 {
 
-
-	public echiquierGraphique()//ActionListener auditeurBoutons
+	public echiquierGraphique()// ActionListener auditeurBoutons
 	{
 		this.ajouterUneGrilleDeBoutons(8, 8);// auditeurBoutons
 	}
-	
-	
-	
-	private void ajouterUneGrilleDeBoutons(int nombreDeLignes, int nombreDeColonnes
-			)//ActionListener auditeurBoutons
+
+	private void ajouterUneGrilleDeBoutons(int nombreDeLignes, int nombreDeColonnes)// ActionListener
+																					// auditeurBoutons
 	{
 		this.setLayout(new GridLayout(nombreDeLignes, nombreDeColonnes));
 
-		for (int numeroDeBouton = 0; numeroDeBouton < nombreDeColonnes*nombreDeLignes; numeroDeBouton++)
+		for (int numeroDeColonne = 0; numeroDeColonne < nombreDeColonnes; numeroDeColonne++)
 		{
-			JButton bouton = new JButton(""+numeroDeBouton);
-			//bouton.addActionListener(auditeurBoutons);
-			this.add(bouton);
+			for (int numeroDeLigne = 0; numeroDeLigne < nombreDeColonnes; numeroDeLigne++)
+			{
+				JButtonPosition bouton = new JButtonPosition(numeroDeColonne, numeroDeLigne);
+				// bouton.addActionListener(auditeurBoutons);
+				this.add(bouton);
+			}
 		}
 	}
 

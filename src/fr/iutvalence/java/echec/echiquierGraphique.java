@@ -22,7 +22,7 @@ public class echiquierGraphique extends JPanel
 		{
 			for (int numeroDeLigne = 0; numeroDeLigne < nombreDeColonnes; numeroDeLigne++)
 			{
-				JButtonPosition bouton = new JButtonPosition(numeroDeColonne, numeroDeLigne);
+				JButtonPosition bouton = new JButtonPosition(new Position(numeroDeLigne, numeroDeColonne));
 				// bouton.addActionListener(auditeurBoutons);
 				this.add(bouton);
 			}

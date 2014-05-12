@@ -5,11 +5,20 @@ import javax.swing.*;
 public class JButtonPosition extends JButton
 {
 
-	private Position position;
-	
-	public JButtonPosition(Integer numeroDeColonne, Integer numeroDeLigne)
+	private final Position position;
+
+	public JButtonPosition(Position position)
 	{
-		this.position = new Position(numeroDeLigne, numeroDeColonne);
+		super();
+		this.position = position;
 	}
+
+	public Position getPosition()
+	{
+		return position;
+	}
+	
+
+
 	
 }

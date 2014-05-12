@@ -16,7 +16,7 @@ public class LanceurDEchecs
 		Joueur joueurBlanc = new JoueurClavier(Couleur.BLANC);
 		Joueur joueurNoir = new JoueurClavier(Couleur.NOIR);	
 		
-		PartieDEchecs partieDEchec = new PartieDEchecs(joueurBlanc, joueurNoir, new AffichageConsole());
+		PartieDEchecs partieDEchec = new PartieDEchecs(joueurBlanc, joueurNoir, new AffichageGraphique());
 		
 		partieDEchec.jouerUnePartieDEchec();
 

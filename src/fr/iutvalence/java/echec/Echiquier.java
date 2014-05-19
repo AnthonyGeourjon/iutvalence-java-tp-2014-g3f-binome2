@@ -26,7 +26,7 @@ public class Echiquier
 	/**
 	 * Cases
 	 */
-	public Case[][] cases;
+	private Case[][] cases;
 
 	/**
 	 * Cree un nouvel echiquier, avec les pièces déjà disposées
@@ -190,5 +190,13 @@ public class Echiquier
 	{
 		return (this.cases[position.obtenirNumeroDeLigne()][position
 				.obtenirNumeroDeColonne()].obtenirPiece() != null);
+	}
+
+	/**
+	 * @return les cases de l'echiquier
+	 */
+	public Case[][] getCases()
+	{
+		return this.cases;
 	}
 }

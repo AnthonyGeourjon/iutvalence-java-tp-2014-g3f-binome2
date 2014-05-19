@@ -1,12 +1,18 @@
 package fr.iutvalence.java.echec;
 
 import java.awt.GridLayout;
+import java.awt.LayoutManager;
 import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
 public class echiquierGraphique extends JPanel
 {
+	private int nombreDeColonnes;
+	
+	private  int nombreDeLignes;
+	
+	private LayoutManager grille;
 
 	public echiquierGraphique()// ActionListener auditeurBoutons
 	{
@@ -16,7 +22,12 @@ public class echiquierGraphique extends JPanel
 	private void ajouterUneGrilleDeBoutons(int nombreDeLignes, int nombreDeColonnes)// ActionListener
 																					// auditeurBoutons
 	{
-		this.setLayout(new GridLayout(nombreDeLignes, nombreDeColonnes));
+		this.nombreDeColonnes=nombreDeColonnes;
+		this.nombreDeLignes=nombreDeLignes;
+		
+		this.grille=new GridLayout(nombreDeLignes, nombreDeColonnes);
+		
+		this.setLayout(this.grille);
 
 		for (int numeroDeColonne = 0; numeroDeColonne < nombreDeColonnes; numeroDeColonne++)
 		{
@@ -27,6 +38,11 @@ public class echiquierGraphique extends JPanel
 				this.add(bouton);
 			}
 		}
+	}
+	
+	public void afficherLesPieces()
+	{
+		
 	}
 
 }

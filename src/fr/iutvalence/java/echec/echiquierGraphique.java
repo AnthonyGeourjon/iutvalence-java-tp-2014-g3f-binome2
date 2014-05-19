@@ -6,43 +6,77 @@ import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
+/**
+ * @author geourjoa
+ *
+ */
 public class echiquierGraphique extends JPanel
 {
+	/**
+	 *  Nombre de colonne de l'echiquier²
+	 */
 	private int nombreDeColonnes;
 	
-	private  int nombreDeLignes;
+	/**
+	 * Nombre de ligne de l'echiquier
+	 */
+	private int nombreDeLignes;
 	
-	private LayoutManager grille;
+	/**
+	 * grille des JButtons
+	 */
+	private JButtonPosition[][] grille;
 
+	/**
+	 * Constructeur
+	 */
 	public echiquierGraphique()// ActionListener auditeurBoutons
 	{
 		this.ajouterUneGrilleDeBoutons(8, 8);// auditeurBoutons
 	}
 
+	/**
+	 * @param nombreDeLignes nombre de ligne
+	 * @param nombreDeColonnes nombre de colonne
+	 */
 	private void ajouterUneGrilleDeBoutons(int nombreDeLignes, int nombreDeColonnes)// ActionListener
 																					// auditeurBoutons
 	{
 		this.nombreDeColonnes=nombreDeColonnes;
 		this.nombreDeLignes=nombreDeLignes;
 		
-		this.grille=new GridLayout(nombreDeLignes, nombreDeColonnes);
 		
-		this.setLayout(this.grille);
-
+		this.grille=new JButtonPosition[nombreDeColonnes][nombreDeLignes];
+		
+		this.setLayout(new GridLayout(nombreDeLignes, nombreDeColonnes));
+		
 		for (int numeroDeColonne = 0; numeroDeColonne < nombreDeColonnes; numeroDeColonne++)
 		{
 			for (int numeroDeLigne = 0; numeroDeLigne < nombreDeColonnes; numeroDeLigne++)
 			{
-				JButtonPosition bouton = new JButtonPosition(new Position(numeroDeLigne, numeroDeColonne));
+				JButtonPosition boutonCourant = new JButtonPosition(new Position(numeroDeLigne, numeroDeColonne));
 				// bouton.addActionListener(auditeurBoutons);
-				this.add(bouton);
+				this.add(boutonCourant);
+				
+				this.grille[numeroDeLigne][numeroDeColonne]=boutonCourant;
 			}
 		}
+
+		
 	}
 	
-	public void afficherLesPieces()
-	{
-		
+	/**
+	 * @param echiquier echiquier sur lequel on affichera
+	 */
+	public void afficherLesPieces(Echiquier echiquier)
+	{		
+		for(int numeroDeLigne=0; numeroDeLigne<this.nombreDeLignes; numeroDeLigne++)
+		{
+			for(int numeroDeColonne=0; numeroDeColonne<this.nombreDeColonnes; numeroDeColonne++)
+			{
+				this.grille[numeroDeLigne][numeroDeColonne].setName(echiquier.getCases()[numeroDeLigne][numeroDeColonne].obtenirPiece().toString());
+			}
+		}
 	}
 
 }

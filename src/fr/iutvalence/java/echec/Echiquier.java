@@ -180,6 +180,16 @@ public class Echiquier
 				positionDepart, positionDestination);
 	}
 
+	public static int getNombreDeColonnes()
+	{
+		return NOMBRE_DE_COLONNES;
+	}
+
+	public static int getNombreDeLignes()
+	{
+		return NOMBRE_DE_LIGNES;
+	}
+
 	/**
 	 * Vérifier si la case est occupée
 	 * @param position

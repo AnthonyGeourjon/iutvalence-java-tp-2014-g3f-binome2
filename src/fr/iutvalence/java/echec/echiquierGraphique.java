@@ -26,13 +26,17 @@ public class echiquierGraphique extends JPanel
 	 * grille des JButtons
 	 */
 	private JButtonPosition[][] grille;
+	
+	private Echiquier echiquierQuiSeraRepresente;
 
 	/**
 	 * Constructeur
+	 * @param echiquierARepresenter 
 	 */
-	public echiquierGraphique()// ActionListener auditeurBoutons
+	public echiquierGraphique(Echiquier echiquierARepresenter)
 	{
-		this.ajouterUneGrilleDeBoutons(8, 8);// auditeurBoutons
+		this.ajouterUneGrilleDeBoutons(echiquierARepresenter.getNombreDeColonnes(), echiquierARepresenter.getNombreDeLignes());
+		this.echiquierQuiSeraRepresente= echiquierARepresenter;
 	}
 
 	/**

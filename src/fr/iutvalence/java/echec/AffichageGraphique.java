@@ -33,11 +33,10 @@ public class AffichageGraphique implements Runnable, Affichage
 	}
 	
 
-	@Override
-	public void run()
+	private void initialiserAffichage(Echiquier echiquierARepresenter)
 	{
 		this.fenetre = new JFrame();
-		this.echiquierGraphique= new echiquierGraphique();
+		this.echiquierGraphique= new echiquierGraphique(echiquierARepresenter);
 		
 		this.fenetre.add(this.echiquierGraphique);
 		this.fenetre.setVisible(true);

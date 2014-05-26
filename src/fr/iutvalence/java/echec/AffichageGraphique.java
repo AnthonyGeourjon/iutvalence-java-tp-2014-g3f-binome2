@@ -33,10 +33,10 @@ public class AffichageGraphique implements Runnable, Affichage
 	}
 	
 
-	private void initialiserAffichage(Echiquier echiquierARepresenter)
+	private void initialiserAffichage()
 	{
 		this.fenetre = new JFrame();
-		this.echiquierGraphique= new echiquierGraphique(echiquierARepresenter);
+		this.echiquierGraphique= new echiquierGraphique();
 		
 		this.fenetre.add(this.echiquierGraphique);
 		this.fenetre.setVisible(true);
@@ -48,5 +48,12 @@ public class AffichageGraphique implements Runnable, Affichage
 		// Verouillage des dimensions de la fenêtre
 		this.fenetre.setResizable(false);
 
+	}
+
+	@Override
+	public void run()
+	{
+		this.initialiserAffichage();
+		
 	}
 }

@@ -53,7 +53,7 @@ public class PartieDEchecs
 
 		while (true)
 		{
-			this.affichage.afficherTour(numeroTour, echiquier);
+			this.affichage.afficherTour(this.numeroTour, this.echiquier);
 
 			do
 			{

@@ -16,12 +16,12 @@ public class Echiquier
 	/**
 	 * Nombre de colonnes de l'échiquier
 	 */
-	private static final int NOMBRE_DE_COLONNES = 8;
+	public static final int NOMBRE_DE_COLONNES = 8;
 
 	/**
 	 * Nombre de lignes de l'échiquier
 	 */
-	private static final int NOMBRE_DE_LIGNES = 8;
+	public static final int NOMBRE_DE_LIGNES = 8;
 
 	/**
 	 * Cases
@@ -180,15 +180,6 @@ public class Echiquier
 				positionDepart, positionDestination);
 	}
 
-	public static int getNombreDeColonnes()
-	{
-		return NOMBRE_DE_COLONNES;
-	}
-
-	public static int getNombreDeLignes()
-	{
-		return NOMBRE_DE_LIGNES;
-	}
 
 	/**
 	 * Vérifier si la case est occupée

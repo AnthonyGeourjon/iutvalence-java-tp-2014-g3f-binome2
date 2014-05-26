@@ -12,6 +12,7 @@ import javax.swing.*;
  */
 public class echiquierGraphique extends JPanel
 {
+
 	/**
 	 *  Nombre de colonne de l'echiquier²
 	 */
@@ -26,17 +27,14 @@ public class echiquierGraphique extends JPanel
 	 * grille des JButtons
 	 */
 	private JButtonPosition[][] grille;
-	
-	private Echiquier echiquierQuiSeraRepresente;
 
 	/**
 	 * Constructeur
-	 * @param echiquierARepresenter 
 	 */
-	public echiquierGraphique(Echiquier echiquierARepresenter)
+	public echiquierGraphique()
 	{
-		this.ajouterUneGrilleDeBoutons(echiquierARepresenter.getNombreDeColonnes(), echiquierARepresenter.getNombreDeLignes());
-		this.echiquierQuiSeraRepresente= echiquierARepresenter;
+		this.ajouterUneGrilleDeBoutons(Echiquier.NOMBRE_DE_COLONNES, Echiquier.NOMBRE_DE_LIGNES);
+	
 	}
 
 	/**
@@ -65,6 +63,7 @@ public class echiquierGraphique extends JPanel
 				this.grille[numeroDeLigne][numeroDeColonne]=boutonCourant;
 			}
 		}
+		
 
 		
 	}
